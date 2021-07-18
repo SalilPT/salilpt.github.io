@@ -12,11 +12,12 @@ div.navigation_ribbon a {
 	font-weight: bold;
  	color: #FFFFFF;
 	text-align: center;
-	
+	text-decoration-line: none;
 }
 
 div.navigation_ribbon {
-	background-color: #744899;
+	text-align: center;
+	background-color: #B79DCC;
 	position: relative;
 	margin: 40px, -25px, 30px, -25px;
 	padding: 10px
