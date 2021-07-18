@@ -10,5 +10,14 @@ div.navigation_ribbon a {
 	font-family: "Verdana", "Times New Roman", sans-serif;
 	font-size: 16px;
 	font-weight: bold;
+ 	color: #FFFFFF;
 	text-align: center;
+	
+}
+
+div.navigation_ribbon {
+	background-color: #744899;
+	position: relative;
+	margin: 40px, -25px, 30px, -25px;
+	padding: 10px
 }
