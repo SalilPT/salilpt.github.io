@@ -4,11 +4,12 @@ html, body {
 
 h1 {
 	font-family: "Tahoma", "Verdana", sans-serif;
+	font-size: 36px;
 }
 
 div.navigation_ribbon a {
 	font-family: "Verdana", "Times New Roman", sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: bold;
     text-shadow: 1px 2px #C0C0C0;
  	color: #FFFFFF;
@@ -21,7 +22,7 @@ div.navigation_ribbon a {
     /*Animation*/
     transition-property: background-color, text-shadow, font-size;
     transition-duration: 0.5s;
-    transition-timing-function: ease-in-out;
+    transition-timing-function: ease-out;
 }
 
 div.navigation_ribbon a:hover{
@@ -34,5 +35,5 @@ div.navigation_ribbon {
 	background-color: #B79DCC;
 	position: relative;
 	margin: 40px, -25px, 30px, -25px;
-	padding: 10px;
+	padding: 12px;
 }
