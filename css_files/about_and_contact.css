@@ -7,10 +7,13 @@ h1 {
 	font-size: 36px;
 }
 
-h3, h4 {
+h2, h3 {
 	font-family: "Tahoma", "Verdana", sans-serif;
 }
 
+/*
+NAVIGATION RIBBON
+*/
 div.navigation_ribbon a {
 	font-family: "Verdana", "Times New Roman", sans-serif;
 	font-size: 18px;
@@ -25,7 +28,7 @@ div.navigation_ribbon a {
 
     /*Animation*/
     transition-property: background-color, text-shadow, font-size;
-    transition-duration: 0.5s;
+    transition-duration: 500ms;
     transition-timing-function: ease-out;
 }
 
@@ -42,9 +45,47 @@ div.navigation_ribbon {
 	padding: 12px;
 }
 
+/*
+ABOUT / CONTACT SECTION
+*/
+
+div.about_section p{
+    font-family: "Verdana", sans-serif;
+    font-size = 16px;
+    color: #000000;
+}
+
 div.about_section a {
-	font-family: "Tahoma", "Verdana", sans-serif;
-	font-size: 14px;
+	font-family: "Verdana", sans-serif;
+	font-size: 16px;
 	color: #000000;
 	text-decoration: underline;
+}
+
+p.creation_paragraph {
+	background-color: #e2f9ed;
+	box-sizing: border-box;
+	width: max-content;
+	border-radius: 10px;
+	padding: 10px 40px 10px 10px;
+}
+
+p.gaming_paragraph {
+	background-color: #c1d6ff;
+	box-sizing: border-box;
+	width: max-content;
+	border-radius: 10px;
+	padding: 10px 40px 10px 10px;
+}
+
+/* Contact Section */
+p.contact_paragraph {
+    font-family: "Verdana", sans-serif;
+    font-size = 16px;
+    color: #000000;
+	background-color: #fffde7;
+	box-sizing: border-box;
+	width: max-content;
+	border-radius: 10px;
+	padding: 10px 40px 10px 10px;
 }
