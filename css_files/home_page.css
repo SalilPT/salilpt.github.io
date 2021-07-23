@@ -21,7 +21,7 @@ div.navigation_ribbon a {
 
     /*Animation*/
     transition-property: background-color, text-shadow, font-size;
-    transition-duration: 0.5s;
+    transition-duration: 500ms;
     transition-timing-function: ease-out;
 }
 
