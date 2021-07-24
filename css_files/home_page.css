@@ -34,6 +34,6 @@ div.navigation_ribbon {
 	text-align: center;
 	background-color: #B79DCC;
 	position: relative;
-	margin: 40px, -25px, 30px, -25px;
+    box-sizing: content-box;
 	padding: 12px;
 }
