@@ -7,33 +7,7 @@ h1 {
 	font-size: 36px;
 }
 
-div.navigation_ribbon a {
-	font-family: "Verdana", "Times New Roman", sans-serif;
-	font-size: 18px;
-	font-weight: bold;
-    text-shadow: 1px 2px #C0C0C0;
- 	color: #FFFFFF;
-	text-decoration-line: none;
-	padding: 5px 15px 5px 15px;
-    margin: 0px 50px 0px 50px;
-    border-radius: 6px;
-    word-wrap: normal;
-
-    /*Animation*/
-    transition-property: background-color, text-shadow, font-size;
-    transition-duration: 500ms;
-    transition-timing-function: ease-out;
-}
-
-div.navigation_ribbon a:hover{
-    background-color:#744899;
-    text-shadow: 0px 0px #000000;
-}
-
-div.navigation_ribbon {
-	text-align: center;
-	background-color: #B79DCC;
-	position: relative;
-    box-sizing: content-box;
-	padding: 12px;
+div.other_links a {
+	font-family: "Tahoma", "Verdana", sans-serif;
+	font-size: 16px;
 }
