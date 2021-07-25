@@ -7,8 +7,19 @@ h1 {
 	font-size: 36px;
 }
 
-h2, h3 {
+h2 {
 	font-family: "Tahoma", "Verdana", sans-serif;
+}
+
+h3  {
+	font-family: "Tahoma", "Verdana", sans-serif;
+	margin-top: 0px;
+	margin-bottom: -10px;
+}
+
+hr {
+	/*Prevent weird positioning with floated elements*/
+	clear:left;
 }
 
 /*
@@ -28,17 +39,22 @@ div.about_section a {
 	text-decoration: underline;
 }
 
+div.creation_section {
+    float: left;
+    margin: 0px 50px 0px 0px;
+}
 p.creation_paragraph {
 	background-color: #e2f9ed;
-	box-sizing: border-box;
-	width: max-content;
+    width: max-content;
 	border-radius: 10px;
 	padding: 10px 40px 10px 10px;
 }
 
+div.gaming_section {
+    float:left;
+}
 p.gaming_paragraph {
 	background-color: #c1d6ff;
-	box-sizing: border-box;
 	width: max-content;
 	border-radius: 10px;
 	padding: 10px 40px 10px 10px;
