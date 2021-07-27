@@ -1,0 +1,31 @@
+html, body {
+	background-color: #DEEFFF;
+}
+
+h1 {
+	font-family: "Georgia", serif;
+	font-size: 36px;
+}
+
+div.works_section {
+	background-color: #E8FFF0;
+	border-radius: 20px;
+	width: max-content;
+}
+
+div.game_dev_section {
+	float: left;
+}
+
+div.programming_section {
+	float: left;
+}
+
+div.music_section {
+	clear: left;
+	float: left;
+}
+
+div.art_section {
+	float: left;
+}
