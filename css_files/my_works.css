@@ -9,23 +9,40 @@ h1 {
 
 div.works_section {
 	background-color: #DEEFFF;
-	border-radius: 20px;
-	width: max-content;
+	border-radius: 10px;
+	align-self: center;
+	font-family: "Tahoma", sans-serif;
+	margin-top: 30px;
+	width: auto;
+	/*Make a grid with 2 columns, each with a width of 50% of the works_section div*/
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+div.works_section div {
+	padding: 10px;
+	border-radius: 10px;
+	margin: 1em;
+}
+
+div.works_section a {
+	color: #505050;
+	font-weight: bold;
 }
 
 div.game_dev_section {
-	float: left;
+	background-color: #E8FFF0;
 }
 
 div.programming_section {
-	float: left;
+	background-color: #CFD0FF;
 }
 
+
 div.music_section {
-	clear: left;
-	float: left;
+	background-color: #FFD0CF;
 }
 
 div.art_section {
-	float: left;
+	background-color: #FFF8DB;
 }
