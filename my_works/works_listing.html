@@ -1,0 +1,81 @@
+	<!DOCTYPE HTML>
+	<html lang="en">
+		<head>
+			<title>SalilPT - My Works (Listing)</title>
+			<!--Set the default URL for relative paths in the document-->
+			<base href="https://salilpt.github.io" target="_self">
+			<!--Set the CSS files for this document-->
+			<!--TODO: Implement sticky nav. ribbon for if the page gets long-->
+			<link rel="stylesheet" href="/css_files/navigation_ribbon.css">
+			<link rel="stylesheet" href="/css_files/works_listing.css">
+			<!--Set the JS files for this document-->
+			<script src="/js_files/works_listing.js"></script>
+		</head>
+		<header>
+			<h1>Game Development</h1>
+		</header>
+		<body>
+		<hr>
+		<!--Navigation ribbon-->
+		<div class="navigation_ribbon">
+			<nav>
+				<a href="https://salilpt.github.io">Home</a>
+				<a href="https://salilpt.github.io/my_works/my_works.html">My Works</a>
+				<a href="about_and_contact.html">About / Contact</a>
+				<!--TODO: Add link or button in nav. ribbon to return to the top of the page-->
+			</nav>
+		</div>
+		<!--Sidebar Left-->
+		<nav class="sidebar_left">
+			<a data-sidebar-section="gamedev">Eschernian</a><span class="sidebar_arrow"></span>
+			<a data-sidebar-section="gamedev">Lionel's Gold Quest</a><span class="sidebar_arrow"></span>
+			<a data-sidebar-section="gamedev">Prickly Testers</a><span class="sidebar_arrow"></span>
+			<a data-sidebar-section="programming">Programming Placeholder 1</a><span class="sidebar_arrow"></span>
+			<a data-sidebar-section="Music">Music Placeholder 1</a><span class="sidebar_arrow"></span>
+			<a data-sidebar-section="Music">Music Placeholder 2</a><span class="sidebar_arrow"></span>
+			<a data-sidebar-section="Art">Art Placeholder 1</a><span class="sidebar_arrow"></span>
+			<a data-sidebar-section="Art">Art Placeholder 2</a><span class="sidebar_arrow"></span>
+			<a data-sidebar-section="Art">Art Placeholder 3</a><span class="sidebar_arrow"></span>
+		</nav>
+		<!--Section Buttons (Located under navigation ribbon)-->
+		<div class="section_buttons">
+			<h2>Display by Type</h2>
+			<br>
+			<button type="button" class="section_button" id="all_entries_button">All</button>
+			<button type="button" class="section_button" id="game_dev_button">Game Development</button>
+			<button type="button" class="section_button" id="programming_button">Programming</button>
+			<button type="button" class="section_button">Music</button>
+			<button type="button" class="section_button">Art</button>
+		</div>
+		<!--Works Listing (Located to the right of left sidebar and under section buttons-->
+		<!--TODO: Assign creation date timestamps to listing entries so that they can be searched by when a project was created-->
+		<div class="works_listing">
+			<!--Prickly Testers-->
+			<div class="listing_entry" data-listing-tags='[gamedev,card_game]'>
+				<h3 class="listing_entry_title">Prickly Testers</h3>
+				<picture>
+					<source></source>
+					<img src="https://imgur.com/XyV2Iy2.png" alt="Image from Prickly Testers">
+				</picture>
+				<p>This is placeholder text for my card game Prickly Testers.</p>
+			</div>
+			<!--Placeholder 1-->
+			<div class="listing_entry" data-listing-tags='[gamedev,placeholder]'>
+				<h3 class="listing_entry_title">Placeholder 1</h3>
+				<picture>
+					<source></source>
+					<img src="https://imgur.com/XyV2Iy2.png" alt="Image from Prickly Testers">
+				</picture>
+				<p>This is placeholder text for listing entry 1.</p>
+			</div>
+			<!--Placeholder 2-->
+			<div class="listing_entry" data-listing-tags='[gamedev,placeholder]'>
+				<h3 class="listing_entry_title">Placeholder 2</h3>
+				<picture>
+					<source></source>
+					<img src="https://imgur.com/XyV2Iy2.png" alt="Image from Prickly Testers">
+				</picture>
+				<p>This is placeholder text for listing entry 2.</p>
+			</div>
+		</div>
+		</body>
