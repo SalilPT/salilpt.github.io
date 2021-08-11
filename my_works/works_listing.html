@@ -25,64 +25,66 @@
 				<!--TODO: Add link or button in nav. ribbon to return to the top of the page-->
 			</nav>
 		</div>
-		<!--Sidebar Left-->
-		<nav class="sidebar_left">
-			<a data-sidebar-section="gamedev">Eschernian</a><span class="sidebar_arrow"></span>
-			<a data-sidebar-section="gamedev">Lionel's Gold Quest</a><span class="sidebar_arrow"></span>
-			<a data-sidebar-section="gamedev">Prickly Testers</a><span class="sidebar_arrow"></span>
-			<a data-sidebar-section="programming">Programming Placeholder 1</a><span class="sidebar_arrow"></span>
-			<a data-sidebar-section="Music">Music Placeholder 1</a><span class="sidebar_arrow"></span>
-			<a data-sidebar-section="Music">Music Placeholder 2</a><span class="sidebar_arrow"></span>
-			<a data-sidebar-section="Art">Art Placeholder 1</a><span class="sidebar_arrow"></span>
-			<a data-sidebar-section="Art">Art Placeholder 2</a><span class="sidebar_arrow"></span>
-			<a data-sidebar-section="Art">Art Placeholder 3</a><span class="sidebar_arrow"></span>
-		</nav>
-		<!--Section Buttons (Located under navigation ribbon)-->
-		<div class="section_buttons">
-			<h2>Display by Type</h2>
-			<br>
-			<button type="button" class="section_button" id="all_entries_button">All</button>
-			<button type="button" class="section_button" id="game_dev_button">Game Development</button>
-			<button type="button" class="section_button" id="programming_button">Programming</button>
-			<button type="button" class="section_button">Music</button>
-			<button type="button" class="section_button">Art</button>
-		</div>
-		<!--Works Listing (Located to the right of left sidebar and under section buttons-->
-		<!--TODO: Add href attributes for clicking on listing entry titles and images-->
-		<!--TODO: Assign creation date timestamps to listing entries so that they can be sorted by when a project creation time-->
-		<div class="works_listing">
-			<!--Prickly Testers-->
-			<div class="listing_entry" data-listing-tags='[gamedev,card_game]'>
-				<a class="listing_entry_title">Prickly Testers</a>
-				<a>
-					<picture>
-						<source></source>
-						<img src="https://imgur.com/XyV2Iy2.png" alt="Image from Prickly Testers">
-					</picture>
-				</a>
-				<p>This is placeholder text for my card game Prickly Testers.</p>
+		<div id="listing_section">
+			<!--Sidebar Left-->
+			<nav id="sidebar_left">
+				<a data-sidebar-section="gamedev">Eschernian</a><span class="sidebar_arrow"></span>
+				<a data-sidebar-section="gamedev">Lionel's Gold Quest</a><span class="sidebar_arrow"></span>
+				<a data-sidebar-section="gamedev">Prickly Testers</a><span class="sidebar_arrow"></span>
+				<a data-sidebar-section="programming">Programming Placeholder 1</a><span class="sidebar_arrow"></span>
+				<a data-sidebar-section="Music">Music Placeholder 1</a><span class="sidebar_arrow"></span>
+				<a data-sidebar-section="Music">Music Placeholder 2</a><span class="sidebar_arrow"></span>
+				<a data-sidebar-section="Art">Art Placeholder 1</a><span class="sidebar_arrow"></span>
+				<a data-sidebar-section="Art">Art Placeholder 2</a><span class="sidebar_arrow"></span>
+				<a data-sidebar-section="Art">Art Placeholder 3</a><span class="sidebar_arrow"></span>
+			</nav>
+			<!--Section Buttons (Located under navigation ribbon)-->
+			<div class="section_buttons_box">
+				<h2>Display by Type</h2>
+				<br>
+				<button type="button" class="section_button" id="all_entries_button">All</button>
+				<button type="button" class="section_button" id="game_dev_button">Game Development</button>
+				<button type="button" class="section_button" id="programming_button">Programming</button>
+				<button type="button" class="section_button" id="music_button">Music</button>
+				<button type="button" class="section_button" id="art_button">Art</button>
 			</div>
-			<!--Placeholder 1-->
-			<div class="listing_entry" data-listing-tags='[gamedev,placeholder]'>
-				<a class="listing_entry_title">Placeholder 1</a>
-				<a>
-					<picture>
-						<source></source>
-						<img src="https://imgur.com/XyV2Iy2.png" alt="Image from Prickly Testers">
-					</picture>
-				</a>
-				<p>This is placeholder text for listing entry 1.</p>
-			</div>
-			<!--Placeholder 2-->
-			<div class="listing_entry" data-listing-tags='[gamedev,placeholder]'>
-				<a class="listing_entry_title">Placeholder 2</a>
-				<a>
-					<picture>
-						<source></source>
-						<img src="https://imgur.com/XyV2Iy2.png" alt="Image from Prickly Testers">
-					</picture>
-				</a>
-				<p>This is placeholder text for listing entry 2.</p>
+			<!--Works Listing (Located to the right of left sidebar and under section buttons-->
+			<!--TODO: Add href attributes for clicking on listing entry titles and images-->
+			<!--TODO: Assign creation date timestamps to listing entries so that they can be sorted by when a project creation time-->
+			<div id="works_listing">
+				<!--Prickly Testers-->
+				<div class="listing_entry" data-listing-tags='[gamedev,card_game]'>
+					<a class="listing_entry_title">Prickly Testers</a>
+					<a>
+						<picture>
+							<source></source>
+							<img src="https://imgur.com/XyV2Iy2.png" alt="Image from Prickly Testers">
+						</picture>
+					</a>
+					<p>This is placeholder text for my card game Prickly Testers.</p>
+				</div>
+				<!--Placeholder 1-->
+				<div class="listing_entry" data-listing-tags='[gamedev,placeholder]'>
+					<a class="listing_entry_title">Placeholder 1</a>
+					<a>
+						<picture>
+							<source></source>
+							<img src="https://imgur.com/XyV2Iy2.png" alt="Image from Prickly Testers">
+						</picture>
+					</a>
+					<p>This is placeholder text for listing entry 1.</p>
+				</div>
+				<!--Placeholder 2-->
+				<div class="listing_entry" data-listing-tags='[gamedev,placeholder]'>
+					<a class="listing_entry_title">Placeholder 2</a>
+					<a>
+						<picture>
+							<source></source>
+							<img src="https://imgur.com/XyV2Iy2.png" alt="Image from Prickly Testers">
+						</picture>
+					</a>
+					<p>This is placeholder text for listing entry 2.</p>
+				</div>
 			</div>
 		</div>
 		</body>
