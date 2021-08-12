@@ -1,20 +1,23 @@
-	<!DOCTYPE HTML>
-	<html lang="en">
-		<head>
-			<title>SalilPT - My Works (Listing)</title>
-			<!--Set the default URL for relative paths in the document-->
-			<base href="https://salilpt.github.io" target="_self">
-			<!--Set the CSS files for this document-->
-			<!--TODO: Implement sticky nav. ribbon for if the page gets long-->
-			<link rel="stylesheet" href="/css_files/navigation_ribbon.css">
-			<link rel="stylesheet" href="/css_files/works_listing.css">
-			<!--Set the JS files for this document-->
-			<script src="/js_files/works_listing.js"></script>
-		</head>
-		<header>
-			<h1>Game Development</h1>
-		</header>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>SalilPT - My Works (Listing)</title>
+		<!--Set the default URL for relative paths in the document-->
+		<base href="https://salilpt.github.io" target="_self">
+		<!--Set the CSS files for this document-->
+		<!--TODO: Implement sticky nav. ribbon for if the page gets long-->
+		<link rel="stylesheet" href="/css_files/navigation_ribbon.css">
+		<link rel="stylesheet" href="/css_files/works_listing.css">
+		<!--Set the JS files for this document-->
+		<script src="/js_files/works_listing.js"></script>
+	</head>
 		<body>
+		<header>
+	<!--TODO: Using JS, change header based on what section is currently displayed. For example, "My Works > All" or "My Works > Game Dev."-->
+			<h1>My Works</h1>		
+	 
+		</header>
+		
 		<hr>
 		<!--Navigation ribbon-->
 		<div class="navigation_ribbon">
@@ -39,52 +42,56 @@
 				<a data-sidebar-section="Art">Art Placeholder 3</a><span class="sidebar_arrow"></span>
 			</nav>
 			<!--Section Buttons (Located under navigation ribbon)-->
-			<div class="section_buttons_box">
-				<h2>Display by Type</h2>
+			<div id="section_buttons_box">
+				<h2>Filter by Type</h2>
 				<br>
-				<button type="button" class="section_button" id="all_entries_button">All</button>
-				<button type="button" class="section_button" id="game_dev_button">Game Development</button>
-				<button type="button" class="section_button" id="programming_button">Programming</button>
-				<button type="button" class="section_button" id="music_button">Music</button>
-				<button type="button" class="section_button" id="art_button">Art</button>
+				<div id="section_buttons_container">
+					<button type="button" class="section_button" id="all_entries_button">All</button>
+					<button type="button" class="section_button" id="game_dev_button">Game Development</button>
+					<button type="button" class="section_button" id="programming_button">Programming</button>
+					<button type="button" class="section_button" id="music_button">Music</button>
+					<button type="button" class="section_button" id="art_button">Art</button>
+				</div>
 			</div>
 			<!--Works Listing (Located to the right of left sidebar and under section buttons-->
 			<!--TODO: Add href attributes for clicking on listing entry titles and images-->
 			<!--TODO: Assign creation date timestamps to listing entries so that they can be sorted by when a project creation time-->
 			<div id="works_listing">
 				<!--Prickly Testers-->
-				<div class="listing_entry" data-listing-tags='[gamedev,card_game]'>
-					<a class="listing_entry_title">Prickly Testers</a>
-					<a>
+				<div class="listing_entry" data-listing-tags="[gamedev,card_game]">
+					<a href="salilpt.github.io" class="listing_entry_title">Prickly Testers</a>
+					<a href="salilpt.github.io">
 						<picture>
-							<source></source>
+							<source>
 							<img src="https://imgur.com/XyV2Iy2.png" alt="Image from Prickly Testers">
 						</picture>
 					</a>
-					<p>This is placeholder text for my card game Prickly Testers.</p>
+					<p>This is placeholder text for my card game Prickly Testers. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 				<!--Placeholder 1-->
-				<div class="listing_entry" data-listing-tags='[gamedev,placeholder]'>
+				<div class="listing_entry" data-listing-tags="[gamedev,placeholder]">
 					<a class="listing_entry_title">Placeholder 1</a>
 					<a>
 						<picture>
-							<source></source>
+							<source>
 							<img src="https://imgur.com/XyV2Iy2.png" alt="Image from Prickly Testers">
 						</picture>
 					</a>
-					<p>This is placeholder text for listing entry 1.</p>
+					<p>This is placeholder text for listing entry 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 				<!--Placeholder 2-->
-				<div class="listing_entry" data-listing-tags='[gamedev,placeholder]'>
+				<div class="listing_entry" data-listing-tags="[gamedev,placeholder]">
 					<a class="listing_entry_title">Placeholder 2</a>
 					<a>
 						<picture>
-							<source></source>
+							<source>
 							<img src="https://imgur.com/XyV2Iy2.png" alt="Image from Prickly Testers">
 						</picture>
 					</a>
-					<p>This is placeholder text for listing entry 2.</p>
+					<p>This is placeholder text for listing entry 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 			</div>
 		</div>
-		</body>
+		
+</body>
+</html>
