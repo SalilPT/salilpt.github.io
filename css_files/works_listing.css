@@ -62,7 +62,7 @@ LEFT SIDEBAR
 SECTION BUTTONS
 */
 
-.section_buttons_box {
+#section_buttons_box {
 	border: 1px solid lightblue; /*Used for debugging*/
 	height: max-content;
 	padding: 0.5vh 0.5vw 0.5vh 0.5vw;
@@ -71,7 +71,7 @@ SECTION BUTTONS
 	grid-area: section_buttons_box;
 }
 
-.section_buttons_box h2 {
+#section_buttons_box h2 {
 	margin: 0.5% 0% 0% 0.5%;
 	padding: 0px;
 	font-size: 32px;
@@ -191,6 +191,8 @@ LISTING ENTRIES
 
 .listing_entry p {
 	margin-bottom: 0px;
+	font-size: 20px;
+	font-family: "Georgia", serif;
 }
 
 /*
@@ -215,12 +217,12 @@ MEDIA QUERIES
 
 	.listing_entry {
   	/*Make it so entries only take up 1 column instead of 2*/
-	width: 100%;
+    	width: 100%;
   }
 
 	.listing_entry img {
 	max-width: 90%;
-	max-height: 25vh;
+	max-height: 20vh;
 	}
 }
 
