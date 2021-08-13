@@ -52,7 +52,7 @@ document.getElementById("section_buttons_container").onclick = function(e) {
 		/* If the current button has a header alias, use that on the page's title and header*/
 		if(e.target.getAttribute("data-header-alias") != null) {
 			document.querySelector("title").innerText = "SalilPT - My Works > " + (e.target.getAttribute("data-header-alias"));
-			document.querySelector("header h1").innerText = "SalilPT - My Works > " + (e.target.getAttribute("data-header-alias"));
+			document.querySelector("header h1").innerText = "My Works > " + (e.target.getAttribute("data-header-alias"));
 		}
 		else {
 			var tag_formatted = e.target.getAttribute("data-type-filter").toString().split(",")[0];
