@@ -168,6 +168,11 @@ LISTING ENTRIES
 	grid-area: listing_column;
 }
 
+/*For use with JS. When hidden because a filter button was clicked , an entry
+doesn't appear in the document.*/
+.listing_entry.hidden {
+	display: none !important;
+}
 
 .listing_entry_title {
 	font-family: "Verdana", sans-serif;
