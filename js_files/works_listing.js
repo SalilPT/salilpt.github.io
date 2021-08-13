@@ -61,7 +61,7 @@ document.getElementById("section_buttons_container").onclick = function(e) {
 			tag_formatted = tag_formatted[0].toUpperCase() + tag_formatted.substring(1);
 			console.log(tag_formatted);
 			document.querySelector("title").innerText = "SalilPT - My Works > " + tag_formatted;
-			document.querySelector("header h1").innerText = "SalilPT - My Works > " + tag_formatted;
+			document.querySelector("header h1").innerText = "My Works > " + tag_formatted;
 		}
 	}
 
@@ -74,7 +74,7 @@ document.getElementById("section_buttons_container").onclick = function(e) {
 
 		/*If the all entries button was clicked, reset the page's title and header.*/
 		document.querySelector("title").innerText = "SalilPT - My Works";
-		document.querySelector("header h1").innerText = "SalilPT - My Works";
+		document.querySelector("header h1").innerText = "My Works";
 	}
 }
 
