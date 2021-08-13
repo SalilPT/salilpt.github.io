@@ -47,10 +47,10 @@
 				<br>
 				<div id="section_buttons_container">
 					<button type="button" class="section_button" id="all_entries_button">All</button>
-					<button type="button" class="section_button" id="game_dev_button">Game Development</button>
-					<button type="button" class="section_button" id="programming_button">Programming</button>
-					<button type="button" class="section_button" id="music_button">Music</button>
-					<button type="button" class="section_button" id="art_button">Art</button>
+					<button type="button" class="section_button" id="game_dev_button" data-type-filter="gamedev">Game Development</button>
+					<button type="button" class="section_button" id="programming_button" data-type-filter="programming">Programming</button>
+					<button type="button" class="section_button" id="music_button" data-type-filter="music">Music</button>
+					<button type="button" class="section_button" id="art_button" data-type-filter="art">Art</button>
 				</div>
 			</div>
 			<!--Works Listing (Located to the right of left sidebar and under section buttons-->
@@ -58,7 +58,7 @@
 			<!--TODO: Assign creation date timestamps to listing entries so that they can be sorted by when a project creation time-->
 			<div id="works_listing">
 				<!--Prickly Testers-->
-				<div class="listing_entry" data-listing-tags="[gamedev,card_game]">
+				<div class="listing_entry" data-listing-tags="gamedev,card_game">
 					<a href="salilpt.github.io" class="listing_entry_title">Prickly Testers</a>
 					<a href="salilpt.github.io">
 						<picture>
@@ -69,7 +69,7 @@
 					<p>This is placeholder text for my card game Prickly Testers. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 				<!--Placeholder 1-->
-				<div class="listing_entry" data-listing-tags="[gamedev,placeholder]">
+				<div class="listing_entry" data-listing-tags="gamedev,placeholder,music">
 					<a class="listing_entry_title">Placeholder 1</a>
 					<a>
 						<picture>
@@ -80,7 +80,7 @@
 					<p>This is placeholder text for listing entry 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 				<!--Placeholder 2-->
-				<div class="listing_entry" data-listing-tags="[gamedev,placeholder]">
+				<div class="listing_entry" data-listing-tags="art,placeholder">
 					<a class="listing_entry_title">Placeholder 2</a>
 					<a>
 						<picture>
@@ -93,5 +93,7 @@
 			</div>
 		</div>
 		
+
+
 </body>
 </html>
