@@ -14,7 +14,6 @@ filtered element contains any one of the tags, it passes through the filter.
 function filterByTag(CSS_elem_selector, target_tags) {
 
 	var entries = document.querySelectorAll(CSS_elem_selector);
-
 	for (var i = 0; i < entries.length; i++) {
 		/*Get the tags of the current HTML element as an array of strings. In the
 		HTML document, the tags are delimited by commas.*/
