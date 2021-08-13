@@ -48,6 +48,21 @@ document.getElementById("section_buttons_container").onclick = function(e) {
 	if (e.target.id != "all_entries_button" && e.target.className == "section_button") {
 		/*Note: data-type-filter may have more than one word for the filter, separated by a comma*/
 		filterByTag("[data-listing-tags]", e.target.getAttribute("data-type-filter").toString().split(","));
+
+		/* If the current button has a header alias, use that on the page's title and header*/
+		if(e.target.getAttribute("data-header-alias") != null) {
+			document.querySelector("title").innerText = "SalilPT - My Works > " + (e.target.getAttribute("data-header-alias"));
+			document.querySelector("header h1").innerText = "SalilPT - My Works > " + (e.target.getAttribute("data-header-alias"));
+		}
+		else {
+			var tag_formatted = e.target.getAttribute("data-type-filter").toString().split(",")[0];
+
+			/*Make it so page title and header describe the current filter selection*/
+			tag_formatted = tag_formatted[0].toUpperCase() + tag_formatted.substring(1);
+			console.log(tag_formatted);
+			document.querySelector("title").innerText = "SalilPT - My Works > " + tag_formatted;
+			document.querySelector("header h1").innerText = "SalilPT - My Works > " + tag_formatted;
+		}
 	}
 
 	/*If the all entries button was clicked, make it so no entries are hidden*/
@@ -56,6 +71,10 @@ document.getElementById("section_buttons_container").onclick = function(e) {
 		for (e_idx = 0; e_idx < entries.length; e_idx++) {
 			entries[e_idx].classList.remove("hidden");
 		}
+
+		/*If the all entries button was clicked, reset the page's title and header.*/
+		document.querySelector("title").innerText = "SalilPT - My Works";
+		document.querySelector("header h1").innerText = "SalilPT - My Works";
 	}
 }
 
