@@ -7,10 +7,10 @@ window.onscroll = function() {
 	stickyNavRibbon();
 };
 
-// Get the navbar
+// Get the navigation ribbon
 var nav_ribbon = document.getElementById("navigation_ribbon");
 
-// Get the offset position of the navbar
+// Get the offset position of the navigation ribbon
 var top_offset = nav_ribbon.offsetTop;
 
 /* Add the sticky class to the navigation ribbon when you reach its scroll
