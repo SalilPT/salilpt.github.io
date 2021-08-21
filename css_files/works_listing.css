@@ -2,6 +2,16 @@
 	box-sizing: border-box;
 }
 
+:root {
+	/* Approximate viewport height in px for desktop browsers. Used for responsive design
+	with relative viewport units.
+	To use it with font-size and max(), use the following, where [size] is the
+	font size in px for use on a desktop browser:
+	max([size]px, ([size] / var(--desktop-view-height-px)) * 100vh);
+	*/
+	--desktop-view-height-px: 950;
+}
+
 html, body {
 	background-color: #DEDEFF;
 	/*This might fix an issue the page has where section content isn't positioned
@@ -11,7 +21,9 @@ html, body {
 
 h1 {
 	font-family: "Tahoma", "Verdana", sans-serif;
+	/*Double setting for compatibility*/
 	font-size: 36px;
+	font-size: max(36px, (36 / var(--desktop-view-height-px)) * 100vh);
 }
 
 
@@ -20,7 +32,9 @@ h1 {
 	/*Grid*/
 	display: grid;
 	grid-template-columns: 1fr 8fr;
-	grid-template-rows: max-content;
+	/*The 1fr is included here because Firefox currently renders max-content
+	weirdly*/
+	grid-template-rows: max-content 1fr;
 	grid-template-areas:
 	"sidebar_left section_buttons_box section_buttons_box"
 	"sidebar_left works_listing works_listing"
@@ -49,7 +63,9 @@ LEFT SIDEBAR
 	width: 100%;
 	
 	/*Font*/
-	font-size: medium;
+	/*Double setting for compatibility*/
+	font-size: 16px;
+	font-size: max(16px, (16 / var(--desktop-view-height-px)) * 100vh);
 	font-family: "Arial", serif;
 	font-weight: 600;
 	font-kerning: none;
@@ -79,6 +95,7 @@ SECTION BUTTONS
 	
 	/*Font*/
 	font-size: 32px;
+	font-size: max(32px, (32 / var(--desktop-view-height-px)) * 100vh);;
 	font-family: "Verdana", sans-serif;
 	font-weight: bold;
 }
@@ -103,10 +120,26 @@ SECTION BUTTONS
 	/*Font*/
 	font-family: "Tahoma", sans-serif;
 	font-weight: bold;
+	/*Double setting for compatibility*/
 	font-size: 28px;
+	font-size: max(28px, 2.8vh);
+	
 
 	/*Flex*/
 	flex-grow: 1;
+	
+	/*Animation*/
+	transition:
+		transform 50ms ease-out;
+}
+
+.section_button:active {
+	transform: scale(0.95);
+}
+
+.section_button.pressed_button {
+	transform: scale(0.95);
+	filter: saturate(400%) grayscale(60%) contrast(80%);
 }
 
 #all_entries_button {
@@ -153,7 +186,6 @@ SECTION BUTTONS
 	grid-area: works_listing;
 }
 
-
 /*
 LISTING ENTRIES
 */
@@ -174,7 +206,7 @@ LISTING ENTRIES
 	grid-area: listing_column;
 }
 
-/*For use with JS. When hidden because a filter button was clicked , an entry
+/*For use with JS. When hidden because a filter button was clicked, an entry
 doesn't appear in the document.*/
 .listing_entry.hidden {
 	display: none !important;
@@ -183,7 +215,9 @@ doesn't appear in the document.*/
 .listing_entry_title {
 	font-family: "Verdana", sans-serif;
 	font-weight: bold;
+	/*Double setting for compatibility*/
 	font-size: 28px;
+	font-size: max(28px, (28 / var(--desktop-view-height-px)) * 100vh);
 	margin-top: 0.825vh;
 }
 
@@ -202,7 +236,9 @@ doesn't appear in the document.*/
 }
 
 .listing_entry p {
+	/*Double setting for compatibility*/
 	font-size: 20px;
+	font-size: max(20px, (20 / var(--desktop-view-height-px)) * 100vh);
 	font-family: "Georgia", serif;
 	margin-bottom: 0px;
 }
