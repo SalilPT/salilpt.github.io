@@ -26,7 +26,6 @@ h1 {
 	font-size: max(36px, (36 / var(--desktop-view-height-px)) * 100vh);
 }
 
-
 /*Style everything under the navigation ribbon*/
 #listing_section {
 	/*Grid*/
@@ -122,8 +121,7 @@ SECTION BUTTONS
 	font-weight: bold;
 	/*Double setting for compatibility*/
 	font-size: 28px;
-	font-size: max(28px, 2.8vh);
-	
+	font-size: max(28px, (28 / var(--desktop-view-height-px)) * 100vh);
 
 	/*Flex*/
 	flex-grow: 1;
@@ -167,7 +165,6 @@ SECTION BUTTONS
 	padding-left: 30px;
 	padding-right: 30px;
 }
-
 
 #works_listing {
 	/*TODO: Set background color depending on what type the entry is using JS*/
