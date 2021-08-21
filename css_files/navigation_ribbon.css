@@ -1,15 +1,60 @@
+:root {
+	/* Approximate viewport height in px for desktop browsers. Used for responsive design
+	with relative viewport units.
+	To use it with font-size and max(), use the following, where [size] is the
+	font size in px for use on a desktop browser:
+	max([size]px, ([size] / var(--desktop-view-height-px)) * 100vh);
+	*/
+	--desktop-view-height-px: 950;
+}
+
+/*Many properties in this stylesheet are set twice for the sake of compatibility*/
+
+#navigation_ribbon {
+	display: block;
+	text-align: center;
+	background-color: #B79DCC;
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	height: max-content;
+	
+	padding-top: 7px;
+	padding-top: max(7px, (7 / var(--desktop-view-height-px)) * 100vh);
+	padding-bottom: 7px;
+	padding-bottom: max(7px, (7 / var(--desktop-view-height-px)) * 100vh);
+	
+        /*If the nav. ribbon is sticky, make sure it always appears on top of content*/
+	z-index: 1000;
+}
+
 #navigation_ribbon a {
 	/*Font*/
 	font-family: "Verdana", "Times New Roman", sans-serif;
 	font-size: 18px;
+	font-size: max(18px, (18 / var(--desktop-view-height-px)) * 100vh);
 	font-weight: bold;
 	
 	text-shadow: 1px 2px #C0C0C0;
+	text-shadow:
+		max(1px, (1 / var(--desktop-view-height-px)) * 100vh)
+		max(2px, (2 / var(--desktop-view-height-px)) * 100vh)
+		#C0C0C0;
 	color: #FFFFFF;
 	text-decoration-line: none;
+	
 	padding: 5px 15px 5px 15px;
+	padding: 
+		max(5px, (5 / var(--desktop-view-height-px)) * 100vh)
+		max(15px, (15 / var(--desktop-view-height-px)) * 100vh)
+		max(5px, (5 / var(--desktop-view-height-px)) * 100vh)
+		max(15px, (15 / var(--desktop-view-height-px)) * 100vh);
+	
 	margin: 0px 50px 0px 50px;
+	margin-right: max(50px, (50 / var(--desktop-view-height-px)) * 100vh);
+	margin-left: max(50px, (50 / var(--desktop-view-height-px)) * 100vh);
 	border-radius: 6px;
+	border-radius: max(6px, (6 / var(--desktop-view-height-px)) * 100vh);
 	word-wrap: normal;
 	height: 100%;
 
@@ -26,21 +71,6 @@
 	transform: scale(1.05);
 }
 
-#navigation_ribbon {
-	display: block;
-	text-align: center;
-	background-color: #B79DCC;
-	box-sizing: border-box;
-	position: relative;
-	width: 100%;
-	height: max-content;
-	padding-top: 7px;
-	padding-bottom: 7px;
-	
-        /*If the nav. ribbon is sticky, make sure it always appears on top of content*/
-	z-index: 1000;
-}
-
 #navigation_ribbon nav {
 	display: flex;
 	flex-wrap: wrap;
@@ -55,4 +85,6 @@
 	position: fixed !important;
 	top: 0px;
 	left: 0px;
+	/*There's a weird bug on iOS Safari where the nav. ribbon gets extra space when it's sticky*/
+	height: initial;
 }
