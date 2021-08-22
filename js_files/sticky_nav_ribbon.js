@@ -45,3 +45,22 @@ function stickyNavRibbon() {
 window.onscroll = function() {
 	stickyNavRibbon();
 };
+
+// When the user resizes the page, update top_offset and resize dummy_div (if it exists) accordingly
+window.onresize = function() {
+	//console.log("resizing");
+	/*Scroll to the top of the page, get the distance from the top of the page to the nav. ribbon, then scroll back*/
+	let scroll_y_pos = window.pageYOffset;
+	//console.log("scroll_y_pos: " + scroll_y_pos);
+	document.querySelector("html").scrollTop = 0;
+	nav_ribbon.classList.remove("sticky_nav_ribbon");
+	top_offset = nav_ribbon.offsetTop;
+	//console.log("New top_offset: " + top_offset);
+	// Need to update the height of the dummy div.
+	if(dummy_div != undefined) {
+		//console.log("Setting dummy_div to " + nav_ribbon.offsetHeight.toString() + "px");
+		dummy_div.style.height = nav_ribbon.offsetHeight.toString() + "px";
+	}
+	// Scroll back
+	document.querySelector("html").scrollTop = scroll_y_pos;
+};
