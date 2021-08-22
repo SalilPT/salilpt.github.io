@@ -84,7 +84,6 @@
 .sticky_nav_ribbon {
 	position: fixed !important;
 	top: 0px;
-	left: 0px;
-	/*There's a weird bug on iOS Safari where the nav. ribbon gets extra space when it's sticky*/
-	height: initial;
+	/*There's a weird bug on iOS Safari where the nav. ribbon gets extra space when it's sticky
+	height: initial;*/
 }
