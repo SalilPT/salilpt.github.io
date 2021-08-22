@@ -48,25 +48,25 @@ window.onscroll = function() {
 
 // Store current width of page
 var curr_page_width = window.innerWidth;
-// When the user resizes the page, update top_offset and resize dummy_div (if it exists) accordingly
-//NOTE: ResizeObserver exists, but window.onresize has slightly better browser support
+/* When the user resizes the page, update top_offset and resize dummy_div (if it exists) accordingly */
+// NOTE: ResizeObserver exists, but window.onresize has slightly better browser support
 window.onresize = function() {
 	// Detect change only on width resize or else scrolling on some mobile browsers may stop abrubtly when the URL bar expands
+	// NOTE: Scrolling on mobile browsers while zoomed in may sometimes abruptly stop. This might be related to URL bar expansion.
 	if(window.innerWidth != curr_page_width) {
 		curr_page_width = window.innerWidth;
-		//console.log("resizing");
+		
 		/*Scroll to the top of the page, get the distance from the top of the page to the nav. ribbon, then scroll back*/
 		let scroll_y_pos = window.pageYOffset;
-		//console.log("scroll_y_pos: " + scroll_y_pos);
 		document.querySelector("html").scrollTop = 0;
 		nav_ribbon.classList.remove("sticky_nav_ribbon");
 		top_offset = nav_ribbon.offsetTop;
-		//console.log("New top_offset: " + top_offset);
+		
 		// Need to update the height of the dummy div.
 		if(dummy_div != undefined) {
-			//console.log("Setting dummy_div to " + nav_ribbon.offsetHeight.toString() + "px");
 			dummy_div.style.height = nav_ribbon.offsetHeight.toString() + "px";
 		}
+		
 		// Scroll back
 		document.querySelector("html").scrollTop = scroll_y_pos;
 	}
