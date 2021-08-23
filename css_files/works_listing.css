@@ -16,7 +16,7 @@ html, body {
 	background-color: #DEDEFF;
 	/*This might fix an issue the page has where section content isn't positioned
 	correctly when mobile screen orientation changes.*/
-	height: 100vh;
+	/*height: 100vh;*/
 }
 
 h1 {
