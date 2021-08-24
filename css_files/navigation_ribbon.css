@@ -18,14 +18,11 @@
 	position: relative;
 	width: 100%;
 	height: max-content;
-	
+
 	padding-top: 7px;
 	padding-top: max(7px, (7 / var(--desktop-view-height-px)) * 100vh);
 	padding-bottom: 7px;
 	padding-bottom: max(7px, (7 / var(--desktop-view-height-px)) * 100vh);
-	
-        /*If the nav. ribbon is sticky, make sure it always appears on top of content*/
-	z-index: 1000;
 }
 
 #navigation_ribbon a {
@@ -82,8 +79,10 @@
 
 /*Used to style a sticky nav. ribbon*/
 .sticky_nav_ribbon {
-	position: fixed !important;
-	top: 0px;
-	/*There's a weird bug on iOS Safari where the nav. ribbon gets extra space when it's sticky
-	height: initial;*/
+	position: -webkit-sticky !important;
+	position: sticky !important;
+	top: 0px !important;
+
+	/*Make sure it always appears on top of content*/
+	z-index: 1000;
 }
