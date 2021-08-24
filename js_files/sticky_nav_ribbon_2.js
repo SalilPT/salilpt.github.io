@@ -5,6 +5,9 @@ var ribbon_parent = nav_ribbon.parentElement;
 // Set the max width of the nav. ribbon to the width of its parent element
 nav_ribbon.style.maxWidth = ribbon_parent.offsetWidth.toString() + "px";
 
+// Enable GPU acceleration for nav. ribbon on iOS
+nav_ribbon.style.transform = "translate3d(0, 0, 0)";
+
 // Create and insert a div element with a height equal to the height of the nav. ribbon
 var dummy_div = document.createElement("div");
 dummy_div.style.height = nav_ribbon.offsetHeight.toString() + "px";
