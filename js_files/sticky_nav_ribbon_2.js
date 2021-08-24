@@ -21,11 +21,15 @@ var curr_scroll_y = window.pageYOffset;
 nav_ribbon.style.position = "fixed";
 nav_ribbon.style.top = top_offset.toString() + "px";
 
-/* When the page is scrolled, update the position of the nav. ribbon relative to the viewport */
-window.onscroll = function () {
+// Function to adjust the positioning on the nav. ribbon
+function adjustPosition() {
 	curr_scroll_y = window.pageYOffset;
-	nav_ribbon.style.top = Math.max(top_offset - curr_scroll_y, 0).toString() + "px";
+	nav_ribbon.style.top = Math.max(top_offset - curr_scroll_y, 0).toString() + "px";	
 }
+
+/* When the page is scrolled, update the position of the nav. ribbon relative to the viewport */
+document.addEventListener("scroll", adjustPosition());
+document.addEventListener("wheel", adjustPosition());
 
 /* When the parent element of the nav. ribbon is resized, do the following*/
 /* NOTE: window.resize may also be viable (and is supported by more browsers).
@@ -40,8 +44,7 @@ const ribbon_parent_resize_observer = new ResizeObserver(
 			console.log("dummy_div offsetTop: " + dummy_div.offsetTop);
 
 			// Update the nav. ribbon and dummy div element
-			curr_scroll_y = window.pageYOffset;
-			nav_ribbon.style.top = Math.max(top_offset - curr_scroll_y, 0).toString() + "px";
+			adjustPosition();
 			nav_ribbon.style.maxWidth = ribbon_parent.offsetWidth.toString() + "px";
 			dummy_div.style.height = nav_ribbon.offsetHeight.toString() + "px";
 		}
