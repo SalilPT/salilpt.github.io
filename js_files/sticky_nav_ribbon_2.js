@@ -28,8 +28,8 @@ function adjustPosition() {
 }
 
 /* When the page is scrolled, update the position of the nav. ribbon relative to the viewport */
-document.addEventListener("scroll", adjustPosition());
-document.addEventListener("wheel", adjustPosition());
+window.addEventListener("scroll", adjustPosition);
+window.addEventListener("wheel", adjustPosition);
 
 /* When the parent element of the nav. ribbon is resized, do the following*/
 /* NOTE: window.resize may also be viable (and is supported by more browsers).
