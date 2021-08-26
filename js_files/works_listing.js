@@ -63,7 +63,6 @@ document.getElementById("section_buttons_container").onclick = function(e) {
 
 			/*Make it so page title and header describe the current filter selection*/
 			tag_formatted = tag_formatted[0].toUpperCase() + tag_formatted.substring(1);
-			console.log(tag_formatted);
 			document.querySelector("title").innerText = "SalilPT - My Works > " + tag_formatted;
 			document.querySelector("header h1").innerText = "My Works > " + tag_formatted;
 		}
