@@ -14,9 +14,8 @@
 
 html, body {
 	background-color: #DEDEFF;
-	/*This might fix an issue the page has where section content isn't positioned
-	correctly when mobile screen orientation changes.*/
-	height: 100vh;
+	/*NOTE: Setting the height of the body to 100vh can break the sticky nav. ribbon on
+	very thin screens. Thus, the height of the body isn't set to that anymore.*/
 }
 
 h1 {
