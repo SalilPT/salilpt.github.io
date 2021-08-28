@@ -18,11 +18,27 @@ html, body {
 	very thin screens. Thus, the height of the body isn't set to that anymore.*/
 }
 
+/*Fix for body element sizing issues on mobile adapted from code from allthingssmitty.com
+https://allthingssmitty.com/2020/05/11/css-fix-for-100vh-in-mobile-webkit/
+*/
+
+body {
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
+}
+
+html {
+	height: -webkit-fill-available;
+}
+
+/*****/
+
 h1 {
 	font-family: "Tahoma", "Verdana", sans-serif;
 	/*Double setting for compatibility*/
 	font-size: 36px;
 	font-size: max(36px, (36 / var(--desktop-view-height-px)) * 100vh);
+	overflow-wrap: break-word;
 }
 
 /*Style everything under the navigation ribbon*/
@@ -90,6 +106,7 @@ SECTION BUTTONS
 	color: #707275;
 	padding: 0px;
 	margin: 0.5% 0% 0% 0.5%;
+	overflow-wrap: break-word;
 	
 	/*Font*/
 	font-size: 32px;
