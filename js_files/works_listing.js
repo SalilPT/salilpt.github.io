@@ -41,7 +41,6 @@ function filterByTag(CSS_elem_selector, target_tags) {
 		else {
 			entries[i].classList.add("hidden");
 		}
-		tag_match = false;
 	}
 }
 
