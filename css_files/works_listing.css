@@ -18,21 +18,6 @@ html, body {
 	very thin screens. Thus, the height of the body isn't set to that anymore.*/
 }
 
-/*Fix for body element sizing issues on mobile adapted from code from allthingssmitty.com
-https://allthingssmitty.com/2020/05/11/css-fix-for-100vh-in-mobile-webkit/
-*/
-
-body {
-	min-height: 100vh;
-	min-height: -webkit-fill-available;
-}
-
-html {
-	height: -webkit-fill-available;
-}
-
-/*****/
-
 h1 {
 	font-family: "Tahoma", "Verdana", sans-serif;
 	/*Double setting for compatibility*/
