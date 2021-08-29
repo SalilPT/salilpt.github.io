@@ -86,3 +86,18 @@
 	/*Make sure it always appears on top of content*/
 	z-index: 1000;
 }
+
+/*Fix for body element sizing issues on mobile adapted from code from allthingssmitty.com
+https://allthingssmitty.com/2020/05/11/css-fix-for-100vh-in-mobile-webkit/
+*/
+
+body {
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
+}
+
+html {
+	height: -webkit-fill-available;
+}
+
+/*****/
