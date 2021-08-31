@@ -2,19 +2,14 @@
 <html lang="en">
 	<head>
 		<title>SalilPT - My Works</title>
-		<!--Set the default URL for relative paths in the document-->
-		<base href="https://salilpt.github.io" target="_self">
 		<!--Set the CSS files for this document-->
-		<!--TODO: Implement sticky nav. ribbon for if the page gets long-->
-		<link rel="stylesheet" href="/css_files/navigation_ribbon.css">
-		<link rel="stylesheet" href="/css_files/works_listing.css">
+		<link rel="stylesheet" href="https://salilpt.github.io/css_files/navigation_ribbon.css">
+		<link rel="stylesheet" href="https://salilpt.github.io/css_files/works_listing.css">
 	</head>
-		<body>
+	<body>
 		<header>
-			<h1>My Works</h1>		
-	 
+			<h1>My Works</h1> 
 		</header>
-		
 		<hr>
 		<!--Navigation ribbon-->
 		<div id="navigation_ribbon" class="sticky_nav_ribbon">
@@ -27,15 +22,16 @@
 		<div id="listing_section">
 			<!--Sidebar Left-->
 			<nav id="sidebar_left">
-				<a data-sidebar-section="gamedev">Eschernian</a><span class="sidebar_arrow"></span>
-				<a data-sidebar-section="gamedev">Lionel's Gold Quest</a><span class="sidebar_arrow"></span>
-				<a data-sidebar-section="gamedev">Prickly Testers</a><span class="sidebar_arrow"></span>
-				<a data-sidebar-section="programming">Programming Placeholder 1</a><span class="sidebar_arrow"></span>
-				<a data-sidebar-section="Music">Music Placeholder 1</a><span class="sidebar_arrow"></span>
-				<a data-sidebar-section="Music">Music Placeholder 2</a><span class="sidebar_arrow"></span>
-				<a data-sidebar-section="Art">Art Placeholder 1</a><span class="sidebar_arrow"></span>
-				<a data-sidebar-section="Art">Art Placeholder 2</a><span class="sidebar_arrow"></span>
-				<a data-sidebar-section="Art">Art Placeholder 3</a><span class="sidebar_arrow"></span>
+	<h3>Jump to Entry</h3>	
+				<a href="#Eschernian" data-sidebar-section="gamedev">Eschernian</a>
+				<a data-sidebar-section="gamedev">Lionel's Gold Quest</a>
+				<a href="#Prickly Testers" data-sidebar-section="gamedev">Prickly Testers</a>
+				<a data-sidebar-section="programming">Programming Placeholder 1</a>
+				<a data-sidebar-section="Music">Music Placeholder 1</a>
+				<a data-sidebar-section="Music">Music Placeholder 2</a>
+				<a data-sidebar-section="Art">Art Placeholder 1</a>
+				<a data-sidebar-section="Art">Art Placeholder 2</a>
+				<a data-sidebar-section="Art">Art Placeholder 3</a>
 			</nav>
 			<!--Section Buttons (Located under navigation ribbon)-->
 			<div id="section_buttons_box">
@@ -43,7 +39,7 @@
 				<br>
 				<div id="section_buttons_container">
 					<button type="button" class="section_button" id="all_entries_button">All</button>
-					<button type="button" class="section_button" id="game_dev_button" data-type-filter="gamedev" data-type-filter="gamedev" data-header-alias="Game Dev.">Game Development</button>
+					<button type="button" class="section_button" id="game_dev_button" data-type-filter="gamedev" data-header-alias="Game Dev.">Game Development</button>
 					<button type="button" class="section_button" id="programming_button" data-type-filter="programming">Programming</button>
 					<button type="button" class="section_button" id="music_button" data-type-filter="music">Music</button>
 					<button type="button" class="section_button" id="art_button" data-type-filter="art">Art</button>
@@ -55,7 +51,7 @@
 			<div id="works_listing">
 				<!--Prickly Testers-->
 				<div class="listing_entry" data-listing-tags="gamedev,card_game">
-					<a href="salilpt.github.io" class="listing_entry_title">Prickly Testers</a>
+					<a id="Prickly Testers" href="salilpt.github.io" class="listing_entry_title">Prickly Testers</a>
 					<a href="salilpt.github.io">
 						<picture>
 							<source>
@@ -76,7 +72,7 @@
 					<p>This is placeholder text for listing entry 1. This is relatively short placeholder text.</p>
 				</div>
 				<!--Placeholder 2-->
-				<div class="listing_entry" data-listing-tags="art,placeholder">
+				<div id="Eschernian" class="listing_entry" data-listing-tags="art,placeholder">
 					<a class="listing_entry_title">Placeholder 2</a>
 					<a>
 						<picture>
@@ -89,7 +85,7 @@
 			</div>
 		</div>
 		<!--Set the JS files for this document-->
-		<script src="/js_files/works_listing.js"></script>
-		<!-- <script src="/js_files/sticky_nav_ribbon.js"></script> -->
+		<script src="https://salilpt.github.io/js_files/works_listing.js"></script>
+
 	</body>
 </html>
