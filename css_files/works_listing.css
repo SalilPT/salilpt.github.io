@@ -50,11 +50,16 @@ LEFT SIDEBAR
 #sidebar_left {
 	border: 1px solid black; /*Used for debugging*/
 	background-color:#F2E7F7;
-	overflow-wrap: anywhere;
-	padding: 2px 8px 0px 3px;
+	overflow-wrap: break-word;
+	padding: 8px 8px 0px 3px;
 	
 	/*Grid*/
 	grid-area: sidebar_left;
+}
+
+#sidebar_left h3 {
+	font-family: "Helvetica", "Arial", sans-serif;
+	margin: 0px;
 }
 
 #sidebar_left a {
@@ -65,9 +70,12 @@ LEFT SIDEBAR
 	/*Double setting for compatibility*/
 	font-size: 16px;
 	font-size: max(16px, (16 / var(--desktop-view-height-px)) * 100vh);
-	font-family: "Arial", serif;
+	font-family: "Trebuchet MS", sans-serif;
 	font-weight: 600;
 	font-kerning: none;
+	
+	text-decoration: none;
+	cursor: pointer;
 	
 	/*Set Margins*/
 	margin-top: 0.5em;
