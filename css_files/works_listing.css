@@ -3,13 +3,30 @@
 }
 
 :root {
-	/* Approximate viewport height in px for desktop browsers. Used for responsive design
+	/*Approximate viewport height in px for desktop browsers. Used for responsive design
 	with relative viewport units.
 	To use it with font-size and max(), use the following, where [size] is the
 	font size in px for use on a desktop browser:
 	max([size]px, ([size] / var(--desktop-view-height-px)) * 100vh);
 	*/
 	--desktop-view-height-px: 950;
+	
+	/*
+	The offset above a listing entry title when jumping to it using an anchor link from the left sidebar.
+	The values below are copy-pasted from the nav. ribbon CSS file.
+	This could probably be done more robustly in JS, but a hacky, CSS-only solution is okay with me for now.
+	*/
+	--entry-title-scroll-margin-top: 
+	calc(
+		/*font size of links*/
+		max(18px, (18 / var(--desktop-view-height-px)) * 100vh)
+		/*top and bottom padding of links*/
+		+ 2 * max(5px, (5 / var(--desktop-view-height-px)) * 100vh)
+		/*top and bottom padding of nav. ribbon*/
+		+ 2 * max(7px, (7 / var(--desktop-view-height-px)) * 100vh)
+		/*Some extra space to make the title more comfortable to read*/
+		+ 0.75vh
+	);
 }
 
 html, body {
@@ -237,6 +254,7 @@ doesn't appear in the document.*/
 	font-size: 28px;
 	font-size: max(28px, (28 / var(--desktop-view-height-px)) * 100vh);
 	margin-top: 0.825vh;
+	scroll-margin-top: var(--entry-title-scroll-margin-top);
 }
 
 .listing_entry img {
