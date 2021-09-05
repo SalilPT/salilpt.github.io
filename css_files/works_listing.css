@@ -66,7 +66,10 @@ LEFT SIDEBAR
 
 #sidebar_left {
 	border: 1px solid black; /*Used for debugging*/
-	background-color:#F2E7F7;
+	/*background-color:#F2E7F7;*/
+	/*Background gradient. Thanks to https://cssgradient.io/ */
+	background: rgb(253,250,255);
+	background: linear-gradient(90deg, rgba(253,250,255,1) 0%, rgba(242,231,247,1) 25%, rgba(242,231,247,1) 100%); 
 	overflow-wrap: break-word;
 	padding: 8px 8px 0px 3px;
 	
@@ -76,6 +79,8 @@ LEFT SIDEBAR
 
 #sidebar_left h3 {
 	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 24px;
+	font-size: max(24px, (24 / var(--desktop-view-height-px)) * 100vh);
 	margin: 0px;
 }
 
@@ -86,7 +91,7 @@ LEFT SIDEBAR
 	/*Font*/
 	/*Double setting for compatibility*/
 	font-size: 16px;
-	font-size: max(16px, (16 / var(--desktop-view-height-px)) * 100vh);
+	font-size: max(18px, (18 / var(--desktop-view-height-px)) * 100vh);
 	font-family: "Trebuchet MS", sans-serif;
 	font-weight: 600;
 	font-kerning: none;
