@@ -47,6 +47,13 @@ h1 {
 	overflow-wrap: break-word;
 }
 
+hr {
+	border-top-color: #DCDCDC;
+	border-bottom-color: #E5E5FF;
+	border-style: inset;
+	border-width: 0.1vh;
+}
+
 /*Style everything under the navigation ribbon*/
 #listing_section {
 	/*Grid*/
@@ -75,7 +82,13 @@ LEFT SIDEBAR
 	background: rgb(253,250,255);
 	background: linear-gradient(90deg, rgba(253,250,255,1) 0%, rgba(242,231,247,1) 25%, rgba(242,231,247,1) 100%); 
 	overflow-wrap: break-word;
+	/*Double setting for compatibility*/
 	padding: 8px 8px 0px 3px;
+	padding: 
+		max(8px, (8 / var(--desktop-view-height-px)) * 100vh)
+		max(8px, (3 / var(--desktop-view-height-px)) * 100vh)
+		0px
+		max(3px, (3 / var(--desktop-view-height-px)) * 100vh);
 	
 	/*Grid*/
 	grid-area: sidebar_left;
