@@ -125,6 +125,10 @@ LEFT SIDEBAR
 	text-decoration: underline;
 }
 
+#sidebar_left .hidden {
+	display: none !important;	
+}
+
 /**************************************************
 SECTION BUTTONS
 **************************************************/
