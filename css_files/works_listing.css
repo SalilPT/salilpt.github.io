@@ -58,7 +58,11 @@ hr {
 #listing_section {
 	/*Grid*/
 	display: grid;
-	grid-template-columns: 1fr 9fr;
+	/*Try to keep the left sidebar at a width of 10% of the viewport width.
+	If the sidebar becomes wide enough to fit every block of text on a single line,
+	prevent it from expanding any more. Note that the left sidebar also has a minimum
+	width set in its own rule so that the text inside doesn't get too messy.*/
+	grid-template-columns: fit-content(10%) 1fr;
 	/*The 1fr is included here because Firefox currently renders max-content
 	weirdly*/
 	grid-template-rows: max-content 1fr;
@@ -92,8 +96,8 @@ LEFT SIDEBAR
 	
 	/*Grid*/
 	grid-area: sidebar_left;
-	/*Force the left sidebar to maintain its width in relation to the other grid columns the same proportion*/
-	min-width: 0px;
+	/*Prevent the text inside the left sidebar from becoming messy because of wrapping*/
+	min-width: min-content;
 }
 
 #sidebar_left h3 {
