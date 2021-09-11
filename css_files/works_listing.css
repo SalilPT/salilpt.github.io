@@ -92,6 +92,8 @@ LEFT SIDEBAR
 	
 	/*Grid*/
 	grid-area: sidebar_left;
+	/*Force the left sidebar to maintain its width in relation to the other grid columns the same proportion*/
+	min-width: 0px;
 }
 
 #sidebar_left h3 {
@@ -135,7 +137,7 @@ SECTION BUTTONS
 
 #section_buttons_box {
 	height: max-content;
-	padding: 0.5vh 0.5vw 0.5vh 0.5vw;
+	margin: 0.5vh 0vw 0.5vh 0.5vw;
 
 	/*Grid*/
 	grid-area: section_buttons_box;
@@ -144,7 +146,7 @@ SECTION BUTTONS
 #section_buttons_box h2 {
 	color: #707275;
 	padding: 0px;
-	margin: 0.5% 0% 0% 0.5%;
+	margin: 0.3vh 0px 0px 0.3vh;
 	overflow-wrap: break-word;
 	
 	/*Font*/
@@ -168,8 +170,8 @@ SECTION BUTTONS
 	border: none;
 	border-radius: 8px;
 	border-radius: max(8px, (8 / var(--desktop-view-height-px)) * 100vh);
-	margin-left: 1%;
-	margin-right: 1%;
+	margin-left: 0.5%;
+	margin-right: 0.5%;
 	padding: 1.3vh 1vw 1.3vh 1vw;
 	overflow-wrap: anywhere;
 	
@@ -245,7 +247,7 @@ WORKS LISTING
 	/*Double setting for compatibility*/
 	border: 2px solid #707275;
 	border: max(2px, (2 / var(--desktop-view-height-px)) * 100vh) solid #707275;
-	margin: 8px 0px 0px 0.75vw;
+	margin: 8px 0px 0px 0.5vw;
 	padding: var(--listing-entry-margin);
 	
 	/*Flex*/
