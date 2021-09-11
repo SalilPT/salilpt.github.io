@@ -2,7 +2,7 @@
 "use strict";
 
 /**************************************************************************************************
-BUTTONS FOR FILTERING BY TYPE
+FILTERING BY TYPE
 **************************************************************************************************/
 
 /*
@@ -22,7 +22,7 @@ function filterByTag(CSS_elem_selector, target_tags) {
 		HTML document, the tags are delimited by commas.*/
 		var tag_array = entries[i].getAttribute("data-listing-tags").toString().split(",");
 
-		/* Flag for when the current element passes through filtering by type*/
+		/*Flag for when the current element passes through filtering by type*/
 		var tag_match = false;
 
 		/*Loop through all tags of the current element*/
@@ -44,6 +44,40 @@ function filterByTag(CSS_elem_selector, target_tags) {
 	}
 }
 
+/*
+Function for updating the left sidebar after a section button (not "All") is clicked
+
+Parameters:
+CSS_link_selector: A string that is a valid CSS selector for the anchor elements to check and filter.
+*/
+function filterLeftSidebarLinks(CSS_links_selector) {
+	
+	/*Get the anchor elements and then loop through them*/
+	var links = document.querySelectorAll(CSS_links_selector);
+	for (var i = 0; i < links.length; i++) {
+		
+		/*If the current element doesn't have an href attribute, hide it*/
+		if (links[i].getAttribute("href") == undefined) {
+			links[i].classList.add("hidden");
+			continue;
+		}
+		
+		/*
+		Get the anchor link portion of the current element("#ElementID").
+		If the entry that corresponds to the anchor link exists and is not hidden, then make the current element visible.
+		Else, hide the current element.
+		*/
+		let split_link = links[i].getAttribute("href").split("#");
+		let entry_id = split_link[split_link.length-1];
+		if ((document.getElementById(entry_id) != undefined) && !document.getElementById(entry_id).classList.contains("hidden")) {
+			links[i].classList.remove("hidden");
+		}
+		else {
+			links[i].classList.add("hidden");
+		}
+	}
+}
+
 var current_pressed_button = undefined;
 
 /*Use event delegation on the section buttons container to filter the entries when a button is clicked*/
@@ -53,7 +87,7 @@ document.getElementById("section_buttons_container").onclick = function(e) {
 		filterByTag("[data-listing-tags]", e.target.getAttribute("data-type-filter").toString().split(","));
 
 		/* If the current button has a header alias, use that on the page's title and header*/
-		if(e.target.getAttribute("data-header-alias") != null) {
+		if (e.target.getAttribute("data-header-alias") != null) {
 			document.querySelector("title").innerText = "SalilPT - My Works > " + (e.target.getAttribute("data-header-alias"));
 			document.querySelector("header h1").innerText = "My Works > " + (e.target.getAttribute("data-header-alias"));
 		}
@@ -67,7 +101,7 @@ document.getElementById("section_buttons_container").onclick = function(e) {
 		}
 
 		/*Set var for currently selected filter*/
-		if(current_pressed_button != undefined) {
+		if (current_pressed_button != undefined) {
 			current_pressed_button.classList.remove("pressed_button");
 			current_pressed_button = undefined;
 		}
@@ -87,11 +121,13 @@ document.getElementById("section_buttons_container").onclick = function(e) {
 		document.querySelector("header h1").innerText = "My Works";
 
 		/*Unset current pressed button*/
-		if(current_pressed_button != undefined) {
+		if (current_pressed_button != undefined) {
 			current_pressed_button.classList.remove("pressed_button");
 			current_pressed_button = undefined;
 		}
 	}
+	/*Update the left sidebar*/
+	filterLeftSidebarLinks("#sidebar_left a");
 }
 
 /**************************************************************************************************
