@@ -104,7 +104,8 @@ LEFT SIDEBAR
 	font-family: "Helvetica", "Arial", sans-serif;
 	font-size: 24px;
 	font-size: max(24px, (24 / var(--desktop-view-height-px)) * 100vh);
-	margin: 0px 0px 0px 0.15em;
+	margin: 0px 0px 0.1875em 0.15em;
+
 }
 
 #sidebar_left a {
@@ -114,7 +115,7 @@ LEFT SIDEBAR
 	
 	/*Font*/
 	/*Double setting for compatibility*/
-	font-size: 16px;
+	font-size: 18px;
 	font-size: max(18px, (18 / var(--desktop-view-height-px)) * 100vh);
 	font-family: "Trebuchet MS", sans-serif;
 	font-weight: 600;
@@ -122,9 +123,14 @@ LEFT SIDEBAR
 	
 	text-decoration: none;
 	cursor: pointer;
-	
-	/*Set Margins*/
-	margin: 0.5em 0.25em 0.55em 0.12em;
+
+	/*
+	Set margin and padding.
+	The vertical space surrounding the text is padding in order to prevent inconsistent
+	vertical spacing when some of the links are hidden.This is due to margin collapsing.
+	*/
+	margin: 0em 0.25em 0em 0.12em;
+	padding: 0.25em 0em 0.275em 0em;
 }
 
 #sidebar_left a:hover {
@@ -132,7 +138,11 @@ LEFT SIDEBAR
 }
 
 #sidebar_left .hidden {
-	display: none !important;	
+	opacity: 0%;
+	padding: 0px;
+	max-height: 0px;
+	/*Try to prevent filtered links from being read by screen readers*/
+	visibility: hidden;
 }
 
 /**************************************************
