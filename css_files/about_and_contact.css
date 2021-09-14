@@ -29,6 +29,11 @@ h3  {
 hr {
 	/*Prevent weird positioning with floated elements*/
 	clear: left;
+	
+	border-top-color: #DCDCDC;
+	border-bottom-color: #E5E5FF;
+	border-style: inset;
+	border-width: 0.1vh;
 }
 
 /**************************************************
@@ -49,7 +54,7 @@ div.about_section a {
 /* Creation and Gaming Sections */
 div.creation_section {
 	float: left;
-	margin: 0px 50px 0px 0px;
+	margin: 0px min(50px, 4vw) 0px 0px;
 }
 
 p.creation_paragraph {
