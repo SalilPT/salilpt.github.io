@@ -8,6 +8,21 @@
 	--desktop-view-height-px: 950;
 }
 
+/*Fix for body element sizing issues on mobile adapted from code from allthingssmitty.com
+https://allthingssmitty.com/2020/05/11/css-fix-for-100vh-in-mobile-webkit/
+*/
+
+html {
+	height: -webkit-fill-available;
+}
+
+body {
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
+}
+
+/*****/
+
 /*Many properties in this stylesheet are set twice for the sake of compatibility*/
 
 #navigation_ribbon {
@@ -23,6 +38,15 @@
 	padding-top: max(7px, (7 / var(--desktop-view-height-px)) * 100vh);
 	padding-bottom: 7px;
 	padding-bottom: max(7px, (7 / var(--desktop-view-height-px)) * 100vh);
+}
+
+#navigation_ribbon nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	height: max-content;
+	overflow-wrap: break-word;
 }
 
 #navigation_ribbon a {
@@ -68,15 +92,6 @@
 	transform: scale(1.05);
 }
 
-#navigation_ribbon nav {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	width: 100%;
-	height: max-content;
-	overflow-wrap: break-word;
-}
-
 /*Used to style a sticky nav. ribbon*/
 .sticky_nav_ribbon {
 	position: -webkit-sticky !important;
@@ -86,18 +101,3 @@
 	/*Make sure it always appears on top of content*/
 	z-index: 1000;
 }
-
-/*Fix for body element sizing issues on mobile adapted from code from allthingssmitty.com
-https://allthingssmitty.com/2020/05/11/css-fix-for-100vh-in-mobile-webkit/
-*/
-
-body {
-	min-height: 100vh;
-	min-height: -webkit-fill-available;
-}
-
-html {
-	height: -webkit-fill-available;
-}
-
-/*****/
