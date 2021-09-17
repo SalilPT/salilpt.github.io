@@ -20,7 +20,7 @@
 	The values below are copy-pasted from the nav. ribbon CSS file.
 	This could probably be done more robustly in JS, but a hacky, CSS-only solution is okay with me for now.
 	*/
-	--entry-title-scroll-margin-top: 
+	--entry-scroll-margin-top: 
 	calc(
 		/*font size of links*/
 		max(18px, (18 / var(--desktop-view-height-px)) * 100vh)
@@ -29,7 +29,7 @@
 		/*top and bottom padding of nav. ribbon*/
 		+ 2 * max(7px, (7 / var(--desktop-view-height-px)) * 100vh)
 		/*Some extra space to make the title more comfortable to read*/
-		+ 0.75vh
+		+ 0.5vh
 	);
 }
 
@@ -289,6 +289,10 @@ WORKS LISTING
 	
 	/*Grid*/
 	grid-area: listing_column;
+	
+	/*Trying to make it work on iOS using scroll-snap-margin-top*/
+	scroll-snap-margin-top: var(--entry-scroll-margin-top);
+	scroll-margin-top: var(--entry-scroll-margin-top);
 }
 
 /*For use with JS. When hidden because a filter button was clicked, an entry
@@ -308,9 +312,6 @@ doesn't appear in the document.*/
 	font-size: max(28px, (28 / var(--desktop-view-height-px)) * 100vh);
 	margin-top: 0.825vh;
 	overflow-wrap: break-word;
-	/*Trying to make it work on iOS using scroll-snap-margin-top*/
-	scroll-snap-margin-top: var(--entry-title-scroll-margin-top);
-	scroll-margin-top: var(--entry-title-scroll-margin-top);
 }
 
 .listing_entry_title:hover {
