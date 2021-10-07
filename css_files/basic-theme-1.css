@@ -1,0 +1,20 @@
+/*
+Basic Theme 1
+----------
+This is a basic stylesheet for the site that I made so I can avoid having to type all the rules
+in it again for new pages.
+*/
+
+html, body {
+	background-color: #DEDEFF;
+}
+
+h1 {
+	font-family: "Tahoma", "Verdana", sans-serif;
+}
+
+hr {
+	border-top-color: #DCDCDC;
+	border-bottom-color: #E5E5FF;
+	border-style: inset;
+}
