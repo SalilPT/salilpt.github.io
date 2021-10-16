@@ -4,3 +4,8 @@
 	--card-front-2: url(https://i.imgur.com/XyV2Iy2.png);
 	--card-back: url(https://imgur.com/LIJfvl8.png);
 }
+
+p {
+	font-family: "Tahoma", "Verdana", san-serif;
+	font-size: 18px;
+}
