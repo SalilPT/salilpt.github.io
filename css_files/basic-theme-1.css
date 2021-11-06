@@ -13,6 +13,14 @@ h1 {
 	font-family: "Tahoma", "Verdana", sans-serif;
 }
 
+h2 {
+	font-family: "Verdana", "Tahoma", sans-serif;	
+}
+
+h3 {
+	font-family: "Trebuchet MS", "Verdana" sans-serif;	
+}
+
 hr {
 	border-top-color: #DCDCDC;
 	border-bottom-color: #E5E5FF;
