@@ -5,8 +5,12 @@ This is a basic stylesheet for the site that I made so I can avoid having to typ
 in it again for new pages.
 */
 
+:root {
+	--background-purple: #DEDEFF;	
+}
+
 html, body {
-	background-color: #DEDEFF;
+	background-color: var(--background-purple);
 }
 
 h1 {
