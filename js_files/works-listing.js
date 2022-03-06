@@ -16,17 +16,17 @@ filtered element contains any one of the tags, it passes through the filter.
 */
 function filterByTag(CSS_elem_selector, target_tags) {
 
-	var entries = document.querySelectorAll(CSS_elem_selector);
-	for (var i = 0; i < entries.length; i++) {
+	let entries = document.querySelectorAll(CSS_elem_selector);
+	for (let i = 0; i < entries.length; i++) {
 		/*Get the tags of the current HTML element as an array of strings. In the
 		HTML document, the tags are delimited by commas.*/
-		var tag_array = entries[i].getAttribute("data-listing-tags").toString().split(",");
+		let tag_array = entries[i].getAttribute("data-listing-tags").toString().split(",");
 
 		/*Flag for when the current element passes through filtering by type*/
-		var tag_match = false;
+		let tag_match = false;
 
 		/*Loop through all tags of the current element*/
-		for (var tag_idx = 0; tag_idx < target_tags.length; tag_idx++) {
+		for (let tag_idx = 0; tag_idx < target_tags.length; tag_idx++) {
 			if (tag_array.includes(target_tags[tag_idx])) {
 				tag_match = true;
 				break;
@@ -53,8 +53,8 @@ CSS_link_selector: A string that is a valid CSS selector for the anchor elements
 function filterLeftSidebarLinks(CSS_links_selector) {
 	
 	/*Get the anchor elements and then loop through them*/
-	var links = document.querySelectorAll(CSS_links_selector);
-	for (var i = 0; i < links.length; i++) {
+	let links = document.querySelectorAll(CSS_links_selector);
+	for (let i = 0; i < links.length; i++) {
 		
 		/*If the current element doesn't have an href attribute, hide it*/
 		if (links[i].getAttribute("href") == undefined) {
@@ -78,7 +78,7 @@ function filterLeftSidebarLinks(CSS_links_selector) {
 	}
 }
 
-var current_pressed_button = undefined;
+let current_pressed_button = undefined;
 
 /*Use event delegation on the section buttons container to filter the entries when a button is clicked*/
 document.getElementById("section_buttons_container").onclick = function(e) {
@@ -92,7 +92,7 @@ document.getElementById("section_buttons_container").onclick = function(e) {
 			document.querySelector("header h1").innerText = "My Works > " + (e.target.getAttribute("data-header-alias"));
 		}
 		else {
-			var tag_formatted = e.target.getAttribute("data-type-filter").toString().split(",")[0];
+			let tag_formatted = e.target.getAttribute("data-type-filter").toString().split(",")[0];
 
 			/*Make it so page title and header describe the current filter selection*/
 			tag_formatted = tag_formatted[0].toUpperCase() + tag_formatted.substring(1);
@@ -111,8 +111,8 @@ document.getElementById("section_buttons_container").onclick = function(e) {
 
 	/*If the all entries button was clicked, make it so no entries are hidden*/
 	else if (e.target.id == "all_entries_button") {
-		var entries=document.querySelectorAll("[data-listing-tags]");
-		for (var e_idx = 0; e_idx < entries.length; e_idx++) {
+		let entries=document.querySelectorAll("[data-listing-tags]");
+		for (let e_idx = 0; e_idx < entries.length; e_idx++) {
 			entries[e_idx].classList.remove("hidden");
 		}
 
