@@ -111,7 +111,7 @@ document.getElementById("section_buttons_container").onclick = function(e) {
 
 	/*If the all entries button was clicked, make it so no entries are hidden*/
 	else if (e.target.id == "all_entries_button") {
-		let entries=document.querySelectorAll("[data-listing-tags]");
+		let entries = document.querySelectorAll("[data-listing-tags]");
 		for (let e_idx = 0; e_idx < entries.length; e_idx++) {
 			entries[e_idx].classList.remove("hidden");
 		}
