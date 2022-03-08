@@ -51,17 +51,17 @@ Parameters:
 CSS_link_selector: A string that is a valid CSS selector for the anchor elements to check and filter.
 */
 function filterLeftSidebarLinks(CSS_links_selector) {
-	
+
 	/*Get the anchor elements and then loop through them*/
 	let links = document.querySelectorAll(CSS_links_selector);
 	for (let i = 0; i < links.length; i++) {
-		
+
 		/*If the current element doesn't have an href attribute, hide it*/
 		if (links[i].getAttribute("href") == undefined) {
 			links[i].classList.add("hidden");
 			continue;
 		}
-		
+
 		/*
 		Get the anchor link portion of the current element("#ElementID").
 		If the entry that corresponds to the anchor link exists and is not hidden, then make the current element visible.
