@@ -380,7 +380,7 @@ MEDIA QUERIES
 /*For very wide screens*/
 @media only screen and (min-aspect-ratio: 32 / 9) {
   .listing_entry {
-  	/*Make it so entries take up 3 column instead of 2*/
+  	/*Make it so entries take up 3 columns instead of 2*/
     	width: calc(calc(100% / 3) - 2*var(--listing-entry-margin));
   }
 }
