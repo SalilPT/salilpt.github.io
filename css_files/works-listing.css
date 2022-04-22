@@ -384,3 +384,7 @@ MEDIA QUERIES
     	width: calc(calc(100% / 3) - 2*var(--listing-entry-margin));
   }
 }
+
+/**************************************************
+SPECIAL CASES FOR ENTRIES
+**************************************************/
