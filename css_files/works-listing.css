@@ -388,3 +388,12 @@ MEDIA QUERIES
 /**************************************************
 SPECIAL CASES FOR ENTRIES
 **************************************************/
+#lionel\%27s\-gold\-quest img {
+	/*Some browsers might use the first version*/ 
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: crisp-edges;
+	
+	/*Stretch image but maintain its aspect ratio*/
+	width: 100%;
+	object-fit: contain;
+}
