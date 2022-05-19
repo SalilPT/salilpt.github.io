@@ -389,7 +389,10 @@ MEDIA QUERIES
 SPECIAL CASES FOR ENTRIES
 **************************************************/
 #lionel\%27s\-gold\-quest img {
-	/*Some browsers might use the first version*/ 
+	/*
+	Upscale without noticeable blurriness.
+	Some browsers currently don't support the crisp-edges property.
+	*/ 
 	image-rendering: -webkit-optimize-contrast;
 	image-rendering: pixelated;
 	image-rendering: crisp-edges;
