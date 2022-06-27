@@ -1,7 +1,7 @@
 :root {
+	--root-font-size: 16px;
 	/*Set the root font size for use with rem units*/
 	font-size: 16px;
-	--root-font-size: 16px;
 }
 
 h1 {
