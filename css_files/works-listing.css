@@ -318,7 +318,7 @@ doesn't appear in the document.*/
 	overflow-wrap: break-word;
 }
 
-.listing_entry_title:hover {
+.listing_entry_title:hover:not([href=""]) {
 	text-decoration: underline;
 }
 
