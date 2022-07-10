@@ -318,9 +318,15 @@ doesn't appear in the document.*/
 	overflow-wrap: break-word;
 }
 
+/* Change cursor icon and underline title of listing entry if its href attribute isn't an empty string */
+.listing_entry_title[href=""] {
+	cursor: default;
+}
+
 .listing_entry_title:hover:not([href=""]) {
 	text-decoration: underline;
 }
+/**/
 
 .listing_entry img {
 	display: block;
