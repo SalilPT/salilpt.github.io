@@ -305,6 +305,11 @@ doesn't appear in the document.*/
 	display: none !important;
 }
 
+/* Prevent a elements in listing entries from linking to the current page because their href attributes are empty strings */
+.listing_entry a[href=""] {
+	pointer-events: none;
+}
+
 .listing_entry_title {
 	color: #000000;
 	cursor: pointer;
