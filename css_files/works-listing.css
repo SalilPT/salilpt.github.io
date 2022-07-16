@@ -361,6 +361,9 @@ doesn't appear in the document.*/
 	margin-right: auto;
 
 	max-width: 90%;
+	
+	/* Make sure pointer events aren't disabled */
+	pointer-events: initial !important;
 }
 
 .listing_entry p {
