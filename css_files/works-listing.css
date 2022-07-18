@@ -174,6 +174,7 @@ SECTION BUTTONS
 	font-weight: bold;
 }
 
+/* TODO: Try to change CSS code for section buttons so that the "Art" button won't be super wide for some window dimensions */
 #section_buttons_container {
 	/*Flexbox*/
 	display: flex;
