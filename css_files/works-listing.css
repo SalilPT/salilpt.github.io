@@ -3,7 +3,8 @@
 }
 
 :root {
-	/*Approximate viewport height in px for desktop browsers. Used for responsive design
+	/*
+	Approximate viewport height in px for desktop browsers. Used for responsive design
 	with relative viewport units.
 	To use it with font-size and max(), use the following, where [size] is the
 	font size in px for use on a desktop browser:
@@ -11,8 +12,10 @@
 	*/
 	--desktop-view-height-px: 950;
 	
-	/* Margin size for entries in the works listing section.
-	Also used for the padding of the works listing container (#works_listing)*/
+	/*
+	Margin size for entries in the works listing section.
+	Also used for the padding of the works listing container (#works_listing)
+	*/
 	--listing-entry-margin: 0.25vh;
 	
 	/*
@@ -22,13 +25,13 @@
 	*/
 	--entry-scroll-margin-top: 
 	calc(
-		/*font size of links*/
+		/* font size of links */
 		max(18px, (18 / var(--desktop-view-height-px)) * 100vh)
-		/*top and bottom padding of links*/
+		/* top and bottom padding of links */
 		+ 2 * max(5px, (5 / var(--desktop-view-height-px)) * 100vh)
-		/*top and bottom padding of nav. ribbon*/
+		/* top and bottom padding of nav. ribbon */
 		+ 2 * max(7px, (7 / var(--desktop-view-height-px)) * 100vh)
-		/*Some extra space to make the title more comfortable to read*/
+		/* Some extra space to make the title more comfortable to read */
 		+ 0.5vh
 	);
 }
