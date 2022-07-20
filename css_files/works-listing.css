@@ -38,13 +38,15 @@
 
 html, body {
 	background-color: #DEDEFF;
-	/*NOTE: Setting the height of the body to 100vh can break the sticky nav. ribbon on
-	very thin screens. Thus, the height of the body isn't set to that anymore.*/
+	/*
+	NOTE: Setting the height of the body to 100vh can break the sticky nav. ribbon on
+	very thin screens. Thus, the height of the body isn't set to that anymore.
+	*/
 }
 
 h1 {
 	font-family: "Tahoma", "Verdana", sans-serif;
-	/*Double setting for compatibility*/
+	/* Double setting for compatibility */
 	font-size: 36px;
 	font-size: max(36px, (36 / var(--desktop-view-height-px)) * 100vh);
 	overflow-wrap: break-word;
@@ -57,24 +59,28 @@ hr {
 	border-width: 0.1vh;
 }
 
-/*Style everything under the navigation ribbon*/
+/* Style everything under the navigation ribbon */
 #listing_section {
-	/*Grid*/
+	/* Grid */
 	display: grid;
-	/*Try to keep the left sidebar at a width of 10% of the viewport width.
+	/*
+	Try to keep the left sidebar at a width of 10% of the viewport width.
 	If the sidebar becomes wide enough to fit every block of text on a single line,
 	prevent it from expanding any more. Note that the left sidebar also has a minimum
-	width set in its own rule so that the text inside doesn't get too messy.*/
+	width set in its own rule so that the text inside doesn't get too messy.
+	*/
 	grid-template-columns: fit-content(10%) 1fr;
-	/*The 1fr is included here because Firefox currently renders max-content
-	weirdly*/
+	/*
+	The 1fr is included here because Firefox currently renders max-content
+	weirdly
+	*/
 	grid-template-rows: max-content 1fr;
 	grid-template-areas:
 	"sidebar_left section_buttons_box section_buttons_box"
 	"sidebar_left works_listing works_listing"
 	;
 
-	/*Add a bit of space at the very bottom of the webpage*/
+	/* Add a bit of space at the very bottom of the webpage */
 	padding-bottom: 10px;
 }
 
