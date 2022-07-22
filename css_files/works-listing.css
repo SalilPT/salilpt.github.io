@@ -94,12 +94,12 @@ LEFT SIDEBAR
 	border-left: 1px solid #c9c9c9;
 	border-bottom: 1px solid #8f8f8f;
 	
-	/*background-color:#F2E7F7;*/
-	/*Background gradient. Thanks to https://cssgradient.io/ */
+	/* background-color:#F2E7F7; */
+	/* Background gradient. Thanks to https://cssgradient.io/ */
 	background: rgb(253,250,255);
 	background: linear-gradient(90deg, rgba(253,250,255,1) 0%, rgba(242,231,247,1) 25%, rgba(242,231,247,1) 100%); 
 	overflow-wrap: break-word;
-	/*Double setting for compatibility*/
+	/* Double setting for compatibility */
 	padding: 8px 8px 0px 3px;
 	padding: 
 		max(8px, (8 / var(--desktop-view-height-px)) * 100vh)
@@ -107,9 +107,9 @@ LEFT SIDEBAR
 		0px
 		max(3px, (3 / var(--desktop-view-height-px)) * 100vh);
 	
-	/*Grid*/
+	/* Grid */
 	grid-area: sidebar_left;
-	/*Prevent the text inside the left sidebar from becoming messy because of wrapping*/
+	/* Prevent the text inside the left sidebar from becoming messy because of wrapping */
 	min-width: min-content;
 }
 
@@ -126,8 +126,8 @@ LEFT SIDEBAR
 	width: 100%;
 	color: hsl(240, 67%, 25%);
 	
-	/*Font*/
-	/*Double setting for compatibility*/
+	/* Font */
+	/* Double setting for compatibility */
 	font-size: 18px;
 	font-size: max(18px, (18 / var(--desktop-view-height-px)) * 100vh);
 	font-family: "Trebuchet MS", sans-serif;
@@ -154,7 +154,7 @@ LEFT SIDEBAR
 	opacity: 0%;
 	padding: 0px;
 	max-height: 0px;
-	/*Try to prevent filtered links from being read by screen readers*/
+	/* Try to prevent filtered links from being read by screen readers */
 	visibility: hidden;
 }
 
@@ -166,7 +166,7 @@ SECTION BUTTONS
 	height: max-content;
 	margin: 0.5vh 0vw 0.5vh 0.5vw;
 
-	/*Grid*/
+	/* Grid */
 	grid-area: section_buttons_box;
 }
 
@@ -176,7 +176,7 @@ SECTION BUTTONS
 	margin: 0.3vh 0px 0px 0.3vh;
 	overflow-wrap: break-word;
 	
-	/*Font*/
+	/* Font */
 	font-size: 32px;
 	font-size: max(32px, (32 / var(--desktop-view-height-px)) * 100vh);
 	font-family: "Verdana", sans-serif;
@@ -185,7 +185,7 @@ SECTION BUTTONS
 
 /* TODO: Try to change CSS code for section buttons so that the "Art" button won't be super wide for some window dimensions */
 #section_buttons_container {
-	/*Flexbox*/
+	/* Flexbox */
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: left;
@@ -203,28 +203,28 @@ SECTION BUTTONS
 	padding: 1.3vh 1vw 1.3vh 1vw;
 	overflow-wrap: anywhere;
 	
-	/*Font*/
+	/* Font */
 	font-family: "Tahoma", sans-serif;
 	font-weight: bold;
-	/*Double setting for compatibility*/
+	/* Double setting for compatibility */
 	font-size: 28px;
 	font-size: max(28px, (28 / var(--desktop-view-height-px)) * 100vh);
 
-	/*Flex*/
+	/* Flex */
 	flex-grow: 1;
 	
-	/*Animation*/
+	/* Animation */
 	transition:
 		transform 50ms ease-out,
 		box-shadow 400ms linear;
 }
 
-/*Style when hovering over a button that is not currently pressed*/
+/* Style when hovering over a button that is not currently pressed */
 .section_button:hover:not(.pressed_button) {
 	box-shadow: 0px 0px 1px 1px #cccccc;
 }
 
-/*Style when mouse is held down on a button*/
+/* Style when mouse is held down on a button */
 .section_button:active {
 	transform: scale(0.95);
 }
