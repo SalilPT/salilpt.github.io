@@ -287,7 +287,7 @@ WORKS LISTING
 }
 
 .listing_entry {
-	border: 1px solid gray; /*Used for debugging*/
+	border: 1px solid #808080;
 	border-radius: 8px;
 	border-radius: max(8px, (8 / var(--desktop-view-height-px)) * 100vh);
 	margin: var(--listing-entry-margin);
