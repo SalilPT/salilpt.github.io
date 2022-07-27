@@ -390,10 +390,10 @@ doesn't appear in the document.
 MEDIA QUERIES
 **************************************************/
 
-/*For widescreen viewports rotated 90 degrees clockwise or counterclockwise*/
+/* For widescreen viewports rotated 90 degrees clockwise or counterclockwise */
 @media only screen and (max-aspect-ratio: 12 / 16) {
 	#listing_section {
-	/*Exclude the left sidebar from the grid*/
+	/* Exclude the left sidebar from the grid */
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: max-content;
@@ -407,7 +407,7 @@ MEDIA QUERIES
 	}
 
 	.listing_entry {
-  	/*Make it so entries only take up 1 column instead of 2*/
+  	/* Make it so entries only take up 1 column instead of 2 */
     	width: 100%;
   }
 
@@ -417,10 +417,10 @@ MEDIA QUERIES
 	}
 }
 
-/*For very wide screens*/
+/* For very wide screens */
 @media only screen and (min-aspect-ratio: 32 / 9) {
   .listing_entry {
-  	/*Make it so entries take up 3 columns instead of 2*/
+  	/* Make it so entries take up 3 columns instead of 2 */
     	width: calc(calc(100% / 3) - 2*var(--listing-entry-margin));
   }
 }
@@ -439,7 +439,7 @@ SPECIAL CASES FOR ENTRIES
 	image-rendering: pixelated;
 	image-rendering: crisp-edges;
 	
-	/*Stretch image but maintain its aspect ratio*/
+	/* Stretch image but maintain its aspect ratio */
 	width: 100%;
 	object-fit: contain;
 }
