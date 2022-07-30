@@ -409,7 +409,7 @@ MEDIA QUERIES
 	.listing_entry {
   	/* Make it so entries only take up 1 column instead of 2 */
     	width: 100%;
-  }
+  	}
 
 	.listing_entry img {
 	max-height: 20vh;
@@ -422,15 +422,14 @@ MEDIA QUERIES
   .listing_entry {
   	/* Make it so entries take up 3 columns instead of 2 */
     	width: calc(calc(100% / 3) - 2*var(--listing-entry-margin));
-  }
+  	}
 }
 
 /**************************************************
 SPECIAL CASES FOR ENTRIES
 **************************************************/
 #lionel\%27s\-gold\-quest img,
-#jebs\%27s\-infernal\-escape img
- {
+#jebs\%27s\-infernal\-escape img {
 	/*
 	Upscale without noticeable blurriness.
 	Some browsers currently don't support the crisp-edges property.
