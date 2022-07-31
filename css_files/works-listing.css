@@ -11,13 +11,13 @@
 	max([size]px, ([size] / var(--desktop-view-height-px)) * 100vh);
 	*/
 	--desktop-view-height-px: 950;
-	
+
 	/*
 	Margin size for entries in the works listing section.
 	Also used for the padding of the works listing container (#works_listing)
 	*/
 	--listing-entry-margin: 0.25vh;
-	
+
 	/*
 	The offset above a listing entry title when jumping to it using an anchor link from the left sidebar.
 	The values below are copy-pasted from the nav. ribbon CSS file.
@@ -93,7 +93,7 @@ LEFT SIDEBAR
 	border-right: 1px solid #4d4d4d;
 	border-left: 1px solid #c9c9c9;
 	border-bottom: 1px solid #8f8f8f;
-	
+
 	/* background-color:#F2E7F7; */
 	/* Background gradient. Thanks to https://cssgradient.io/ */
 	background: rgb(253,250,255);
@@ -106,7 +106,7 @@ LEFT SIDEBAR
 		max(8px, (3 / var(--desktop-view-height-px)) * 100vh)
 		0px
 		max(3px, (3 / var(--desktop-view-height-px)) * 100vh);
-	
+
 	/* Grid */
 	grid-area: sidebar_left;
 	/* Prevent the text inside the left sidebar from becoming messy because of wrapping */
@@ -118,14 +118,13 @@ LEFT SIDEBAR
 	font-size: 24px;
 	font-size: max(24px, (24 / var(--desktop-view-height-px)) * 100vh);
 	margin: 0px 0px 0.1875em 0.15em;
-
 }
 
 #sidebar_left a {
 	display: block;
 	width: 100%;
 	color: hsl(240, 67%, 25%);
-	
+
 	/* Font */
 	/* Double setting for compatibility */
 	font-size: 18px;
@@ -133,7 +132,7 @@ LEFT SIDEBAR
 	font-family: "Trebuchet MS", sans-serif;
 	font-weight: 600;
 	font-kerning: none;
-	
+
 	text-decoration: none;
 	cursor: pointer;
 
@@ -175,7 +174,7 @@ SECTION BUTTONS
 	padding: 0px;
 	margin: 0.3vh 0px 0px 0.3vh;
 	overflow-wrap: break-word;
-	
+
 	/* Font */
 	font-size: 32px;
 	font-size: max(32px, (32 / var(--desktop-view-height-px)) * 100vh);
@@ -202,7 +201,7 @@ SECTION BUTTONS
 	margin-right: 0.5%;
 	padding: 1.3vh 1vw 1.3vh 1vw;
 	overflow-wrap: anywhere;
-	
+
 	/* Font */
 	font-family: "Tahoma", sans-serif;
 	font-weight: bold;
@@ -212,7 +211,7 @@ SECTION BUTTONS
 
 	/* Flex */
 	flex-grow: 1;
-	
+
 	/* Animation */
 	transition:
 		transform 50ms ease-out,
@@ -277,11 +276,11 @@ WORKS LISTING
 	border: max(2px, (2 / var(--desktop-view-height-px)) * 100vh) solid #707275;
 	margin: 8px 0px 0px 0.5vw;
 	padding: var(--listing-entry-margin);
-	
+
 	/* Flex */
 	display: flex;
 	flex-wrap: wrap;
-	
+
 	/* Grid */
 	grid-area: works_listing;
 }
@@ -293,17 +292,17 @@ WORKS LISTING
 	margin: var(--listing-entry-margin);
 	/* Set width based on margins of entries */
 	width: calc(50% - 2*var(--listing-entry-margin));
-	
+
 	padding: 0.825vh 0.5vw 0.825vh 0.5vw;
 	text-align: center;
 
 	/* Background gradient. Thanks to https://cssgradient.io/ */
 	background: rgb(222,222,255);
 	background: linear-gradient(0deg, rgba(222,222,255,1) 15%, rgba(227,212,238,1) 50%, rgba(233,233,249,1) 90%);
-	
+
 	/* Grid */
 	grid-area: listing_column;
-	
+
 	/* Trying to make it work on iOS using scroll-snap-margin-top */
 	scroll-snap-margin-top: var(--entry-scroll-margin-top);
 	scroll-margin-top: var(--entry-scroll-margin-top);
@@ -349,14 +348,14 @@ doesn't appear in the document.
 	display: block;
 	cursor: pointer;
 	filter: drop-shadow(1px 2px 2px rgba(128, 128, 128, 0.5));
-	
+
 	/* Set the space away from the title */
 	margin-top: 0.75vh;
 
 	/* Center the image */
 	margin-left: auto;
 	margin-right: auto;
-	
+
 	max-height: 40vh;
 	max-width: 90%;
 }
@@ -373,7 +372,7 @@ doesn't appear in the document.
 	margin-right: auto;
 
 	max-width: 90%;
-	
+
 	/* Make sure pointer events aren't disabled */
 	pointer-events: initial !important;
 }
@@ -437,7 +436,7 @@ SPECIAL CASES FOR ENTRIES
 	image-rendering: -webkit-optimize-contrast;
 	image-rendering: pixelated;
 	image-rendering: crisp-edges;
-	
+
 	/* Stretch image but maintain its aspect ratio */
 	width: 100%;
 	object-fit: contain;
