@@ -98,7 +98,7 @@ document.getElementById("section_buttons_container").onclick = function(e) {
 			document.querySelector("header h1").innerText = "My Works > " + tag_formatted;
 		}
 
-		// Set var for currently selected filter
+		// Set variable for currently selected filter
 		if (current_pressed_button != undefined) {
 			current_pressed_button.classList.remove("pressed_button");
 			current_pressed_button = undefined;
