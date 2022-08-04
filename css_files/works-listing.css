@@ -371,8 +371,8 @@ doesn't appear in the document.
 	margin-left: auto;
 	margin-right: auto;
 
-	min-width: max-content;
 	max-width: 90%;
+	height: max-content;
 
 	/* Make sure pointer events aren't disabled */
 	pointer-events: initial !important;
