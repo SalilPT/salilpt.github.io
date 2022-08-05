@@ -375,7 +375,7 @@ doesn't appear in the document.
 	height: max-content;
 
 	/* Make sure pointer events aren't disabled */
-	pointer-events: initial !important;
+	pointer-events: auto !important;
 }
 
 .listing_entry p {
