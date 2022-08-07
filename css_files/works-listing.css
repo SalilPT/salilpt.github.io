@@ -200,7 +200,7 @@ SECTION BUTTONS
 	margin-left: 0.5%;
 	margin-right: 0.5%;
 	padding: 1.3vh 1vw 1.3vh 1vw;
-	overflow-wrap: anywhere;
+	overflow-wrap: break-word;
 
 	/* Font */
 	font-family: "Tahoma", sans-serif;
