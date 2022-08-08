@@ -44,6 +44,7 @@ div.about_section a {
 
 /* Creation and Gaming Sections */
 /*TODO: Make the background rounded rectangles have gradients*/
+/* TODO: Make cursor hover effects for links in these sections */
 div.creation_section {
 	float: left;
 	margin: 0px min(50px, 4vw) 0px 0px;
