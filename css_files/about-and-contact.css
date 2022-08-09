@@ -42,6 +42,10 @@ div.about_section a {
 	text-decoration: underline;
 }
 
+div.about_section a:hover {
+	color: blue;
+}
+
 /* Creation and Gaming Sections */
 /*TODO: Make the background rounded rectangles have gradients*/
 /* TODO: Make cursor hover effects for links in these sections */
