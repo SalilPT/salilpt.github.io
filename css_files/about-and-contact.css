@@ -1,6 +1,6 @@
 :root {
 	--root-font-size: 16px;
-	/*Set the root font size for use with rem units*/
+	/* Set the root font size for use with rem units */
 	font-size: 16px;
 }
 
@@ -21,7 +21,7 @@ h3  {
 }
 
 hr {
-	/*Prevent weird positioning with floated elements*/
+	/* Prevent weird positioning with floated elements */
 	clear: left;
 	
 	border-width: 0.1vh;
@@ -47,7 +47,7 @@ div.about_section a:hover {
 }
 
 /* Creation and Gaming Sections */
-/*TODO: Make the background rounded rectangles have gradients*/
+/* TODO: Make the background rounded rectangles have gradients */
 /* TODO: Make cursor hover effects for links in these sections */
 div.creation_section {
 	float: left;
