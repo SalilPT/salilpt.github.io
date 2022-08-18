@@ -1,5 +1,6 @@
 :root {
-	/* Approximate viewport height in px for desktop browsers. Used for responsive design
+	/*
+	Approximate viewport height in px for desktop browsers. Used for responsive design
 	with relative viewport units.
 	To use it with font-size and max(), use the following, where [size] is the
 	font size in px for use on a desktop browser:
@@ -8,7 +9,8 @@
 	--desktop-view-height-px: 950;
 }
 
-/*Fix for body element sizing issues on mobile adapted from code from allthingssmitty.com
+/*
+Fix for body element sizing issues on mobile adapted from code from allthingssmitty.com
 https://allthingssmitty.com/2020/05/11/css-fix-for-100vh-in-mobile-webkit/
 */
 
@@ -23,7 +25,7 @@ body {
 
 /*****/
 
-/*Many properties in this stylesheet are set twice for the sake of compatibility*/
+/* Many properties in this stylesheet are set twice for the sake of compatibility */
 
 #navigation_ribbon {
 	display: block;
@@ -50,7 +52,7 @@ body {
 }
 
 #navigation_ribbon a {
-	/*Font*/
+	/* Font */
 	font-family: "Verdana", "Times New Roman", sans-serif;
 	font-size: 18px;
 	font-size: max(18px, (18 / var(--desktop-view-height-px)) * 100vh);
@@ -79,7 +81,7 @@ body {
 	word-wrap: normal;
 	height: 100%;
 
-	/*Animation*/
+	/* Animation */
 	transition:
 		background-color 500ms ease-out,
 		text-shadow 500ms ease-out,
@@ -92,12 +94,12 @@ body {
 	transform: scale(1.05);
 }
 
-/*Used to style a sticky nav. ribbon*/
+/* Used to style a sticky nav. ribbon */
 .sticky_nav_ribbon {
 	position: -webkit-sticky !important;
 	position: sticky !important;
 	top: 0px !important;
 
-	/*Make sure it always appears on top of content*/
+	/* Make sure it always appears on top of content */
 	z-index: 1000;
 }
